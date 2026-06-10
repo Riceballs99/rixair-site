@@ -60,3 +60,17 @@ table.rx-t img{width:54px;height:54px;object-fit:contain}
 .rx-calcbtn{display:inline-block;vertical-align:middle;margin-right:10px;list-style:none}
 .rx-calcbtn a{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;background:#e8f4fa;border-radius:16px;color:#1583ab;transition:background .15s}
 .rx-calcbtn a:hover{background:#d5ecf7;text-decoration:none}
+
+/* rx-onerow: header pe un singur rand (desktop) */
+@media(min-width:992px){
+.main-header{display:flex!important;align-items:center;flex-wrap:nowrap;gap:28px;padding:6px 36px;border-bottom:1px solid #f0f0f0}
+.main-header>.top-head-bg,.main-header>.top-head-bg>.top-head,.main-header .top-head>.row,
+.main-header>div:not(.top-head-bg),.main-header nav.main-menu{display:contents}
+.main-header .logo-h{order:1;flex:0 0 auto;width:auto;padding:0}
+.main-header .nav-menu-hh{order:2;flex:0 0 auto;width:auto;margin:0;padding:0;border:none;background:none}
+.main-header .search-form-box{order:3;flex:0 1 300px;margin-left:auto;width:auto;min-width:200px;padding:0}
+.main-header .acount-section{order:4;flex:0 0 auto;width:auto;padding:0}
+.main-header .nav-menu-hh ul{margin:0}
+.logo-h img{height:96px!important;max-height:96px!important}
+.main-header .mobile-icon, .main-header .menu-trg{display:none!important}
+}
