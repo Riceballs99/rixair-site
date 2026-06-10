@@ -23,3 +23,6 @@ table.rx-t img{width:54px;height:54px;object-fit:contain}
 .rx-hero img{width:100%;display:block;max-height:560px;object-fit:cover}
 .rx-ha{position:absolute;top:46%;width:46px;height:46px;border-radius:50%;background:rgba(120,120,120,.55);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;cursor:pointer;z-index:5}
 .rx-ha.l{left:18px}.rx-ha.r{right:18px}
+
+.rx-vhero{position:relative;width:100%;height:46vw;max-height:640px;min-height:320px;overflow:hidden;background:#0d2d4e url('/domains2/wwwrixairro/files/files/clivet-wallpaper-fascia-bassa-2257x700-b6429-1733220518.png') center/cover no-repeat}
+.rx-vhero iframe{position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:103%;min-width:183vh;transform:translate(-50%,-50%);border:0;pointer-events:none}
