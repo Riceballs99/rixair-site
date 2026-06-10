@@ -54,3 +54,9 @@ table.rx-t img{width:54px;height:54px;object-fit:contain}
 /* rx-logo-big */
 .logo-h img, header .logo img, .main-header .logo-h img{height:150px!important;max-height:150px!important;width:auto!important}
 @media(max-width:760px){.logo-h img{height:64px!important;max-height:64px!important}}
+
+/* buton calculator header + fara dropdown cos */
+.cart-dd{display:none!important}
+.rx-calcbtn{display:inline-block;vertical-align:middle;margin-right:10px;list-style:none}
+.rx-calcbtn a{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;background:#e8f4fa;border-radius:16px;color:#1583ab;transition:background .15s}
+.rx-calcbtn a:hover{background:#d5ecf7;text-decoration:none}
