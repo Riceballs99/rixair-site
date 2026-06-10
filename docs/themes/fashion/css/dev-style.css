@@ -1,0 +1,16 @@
+.-g-checkout-type-popup .title-carousel{padding-top: 24px!important;margin-bottom: 0;}
+.-g-checkout-type-popup .title-carousel .title{font-size: 23px;}
+.-g-checkout-type-popup .__lockersInfo + iframe{background: #e8e8e8;border-radius: 8px;padding: 4px;margin-bottom: 14px;}
+.-g-checkout-type-popup .cart-items.fixed > li{display: flex;flex-wrap: wrap;}
+.-g-checkout-type-popup .cart-items.fixed .prod{flex: 1;}
+.-g-checkout-type-popup .cart-items.fixed .qty-h{font-weight: 600;font-size: 14px;width: auto;padding: 0 15px;}
+.-g-checkout-type-popup .-g-checkout-summary .cart-total,
+.-g-checkout-type-popup .-g-checkout-summary .cupon-h{width: 100%;}
+
+.-g-checkout-submit-disabled{
+	position:relative;padding-right: 42px!important;
+    background-image: url(/themes/fashion/gfx/svg/imgDots.svg)!important;
+    background-repeat: no-repeat !important;
+    background-position: center right !important;
+    background-size: 42px !important;
+}
