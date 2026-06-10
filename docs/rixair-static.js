@@ -109,3 +109,13 @@ function go(d){im[x].style.display='none';x=(x+d+im.length)%im.length;im[x].styl
 w.querySelector('.rx-ha.l').addEventListener('click',function(){go(-1)});
 w.querySelector('.rx-ha.r').addEventListener('click',function(){go(1)});
 setInterval(function(){go(1)},6000);})();
+
+/* rxKenBurns */
+(function(){var w=document.querySelector('.rx-kb');if(!w)return;
+var im=[...w.querySelectorAll('img')],dots=[...w.querySelectorAll('.rx-dots span')],x=0,t;
+function show(n){im[x].classList.remove('on');dots[x].classList.remove('on');x=(n+im.length)%im.length;im[x].classList.add('on');dots[x].classList.add('on');}
+function next(){show(x+1)} function auto(){clearInterval(t);t=setInterval(next,6500)}
+w.querySelector('.rx-ha.l').addEventListener('click',function(){show(x-1);auto()});
+w.querySelector('.rx-ha.r').addEventListener('click',function(){show(x+1);auto()});
+dots.forEach(function(d,i){d.addEventListener('click',function(){show(i);auto()})});
+auto();})();
