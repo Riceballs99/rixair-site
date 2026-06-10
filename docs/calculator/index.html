@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator HVAC Avansat | RIXAIR — Distribuitor Clivet România</title><link rel="canonical" href="https://rixair.ro/calculator/">
+<style>
+  :root {
+    --orange: #f39200;
+    --orange-dark: #d97e00;
+    --orange-soft: #fff4e0;
+    --navy: #1b365d;
+    --navy-dark: #0f2240;
+    --navy-soft: #eef2f8;
+    --green: #2e7d32;
+    --green-soft: #e8f5e9;
+    --red: #c62828;
+    --red-soft: #ffebee;
+    --blue: #0277bd;
+    --blue-soft: #e1f5fe;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e1;
+    --gray-400: #94a3b8;
+    --gray-500: #64748b;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-900: #0f172a;
+    --shadow-sm: 0 1px 3px rgba(15, 34, 64, 0.06), 0 1px 2px rgba(15, 34, 64, 0.04);
+    --shadow-md: 0 4px 12px rgba(15, 34, 64, 0.08), 0 2px 4px rgba(15, 34, 64, 0.04);
+    --shadow-lg: 0 12px 40px rgba(15, 34, 64, 0.12), 0 4px 12px rgba(15, 34, 64, 0.06);
+    --shadow-orange: 0 8px 24px rgba(243, 146, 0, 0.25);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(180deg, var(--gray-50) 0%, #ffffff 100%);
+    color: var(--gray-900);
+    line-height: 1.55;
+    padding: 24px 16px;
+    min-height: 100vh;
+  }
+  .app {
+    max-width: 1080px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+
+  /* ======= HERO ======= */
+  .hero {
+    background:
+      radial-gradient(circle at 100% 0%, rgba(243, 146, 0, 0.25) 0%, transparent 50%),
+      radial-gradient(circle at 0% 100%, rgba(45, 83, 145, 0.4) 0%, transparent 50%),
+      linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+    color: #ffffff;
+    padding: 48px 40px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(243, 146, 0, 0.18);
+    color: var(--orange);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    border: 1px solid rgba(243, 146, 0, 0.3);
+  }
+  .hero h1 {
+    font-size: 36px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+    max-width: 720px;
+  }
+  .hero h1 span { color: var(--orange); }
+  .hero p {
+    font-size: 16px;
+    opacity: 0.85;
+    max-width: 620px;
+    line-height: 1.6;
+  }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .hero-stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    opacity: 0.7;
+    margin-bottom: 4px;
+  }
+  .hero-stat-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--orange);
+  }
+  @media (max-width: 700px) {
+    .hero { padding: 32px 24px 28px; }
+    .hero h1 { font-size: 26px; }
+    .hero p { font-size: 14px; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .hero-stat-value { font-size: 18px; }
+  }
+
+  /* ======= FORM ======= */
+  .form-body { padding: 40px; }
+  @media (max-width: 700px) { .form-body { padding: 24px 18px; } }
+  .section {
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .section:last-of-type { border-bottom: none; padding-bottom: 16px; }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .section-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--orange);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-orange);
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .section-subtitle {
+    font-size: 13px;
+    color: var(--gray-500);
+    margin-top: 2px;
+  }
+
+  .fields-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .fields-3col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+  }
+  @media (max-width: 700px) {
+    .fields-2col, .fields-3col { grid-template-columns: 1fr; gap: 14px; }
+  }
+
+  .field-label {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--navy);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .field-hint {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .num-input {
+    position: relative;
+  }
+  .num-input input {
+    width: 100%;
+    padding: 14px 16px;
+    padding-right: 50px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+    background: #fff;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+  .num-input input:focus {
+    outline: none;
+    border-color: var(--orange);
+    box-shadow: 0 0 0 4px rgba(243, 146, 0, 0.12);
+  }
+  .num-input .unit {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-400);
+    pointer-events: none;
+  }
+
+  /* ===== VISUAL CARD SELECTORS ===== */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+  }
+  .opt-card {
+    position: relative;
+    padding: 14px 12px;
+    background: #fff;
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s;
+    user-select: none;
+  }
+  .opt-card:hover {
+    border-color: var(--gray-300);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
+  .opt-card input { position: absolute; opacity: 0; pointer-events: none; }
+  .opt-card.checked {
+    border-color: var(--orange);
+    background: var(--orange-soft);
+    box-shadow: 0 4px 12px rgba(243, 146, 0, 0.18);
+  }
+  .opt-card .ico {
+    font-size: 22px;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .opt-card .name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.3;
+  }
+  .opt-card .sub {
+    font-size: 11px;
+    color: var(--gray-500);
+    margin-top: 2px;
+  }
+
+  /* Insulation thickness visual */
+  .opt-card .insul-bar {
+    height: 6px;
+    background: var(--gray-200);
+    border-radius: 3px;
+    margin: 8px 6px 4px;
+    overflow: hidden;
+  }
+  .opt-card .insul-bar .fill {
+    height: 100%;
+    background: var(--orange);
+    border-radius: 3px;
+  }
+
+  /* Climate zone picker */
+  .climate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 10px;
+  }
+  .climate-card {
+    position: relative;
+    padding: 14px 14px;
+    background: #fff;
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+  }
+  .climate-card:hover { border-color: var(--gray-300); }
+  .climate-card.checked {
+    border-color: var(--orange);
+    background: var(--orange-soft);
+  }
+  .climate-card input { position: absolute; opacity: 0; pointer-events: none; }
+  .climate-card .zname {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .climate-card .zname .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .climate-card .ztemp {
+    display: inline-block;
+    margin-left: auto;
+    font-size: 11px;
+    background: var(--blue-soft);
+    color: var(--blue);
+    padding: 1px 7px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .climate-card .zcities {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  /* Application big radio */
+  .app-radio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 600px) { .app-radio { grid-template-columns: 1fr; } }
+  .app-card {
+    padding: 18px 14px;
+    background: #fff;
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s;
+    user-select: none;
+    position: relative;
+  }
+  .app-card input { position: absolute; opacity: 0; pointer-events: none; }
+  .app-card:hover { border-color: var(--gray-300); }
+  .app-card.checked {
+    border-color: var(--orange);
+    background: var(--orange-soft);
+    box-shadow: 0 6px 20px rgba(243, 146, 0, 0.18);
+  }
+  .app-card .ico-big {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .app-card .aname {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .app-card .asub {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-top: 4px;
+  }
+
+  /* Toggle */
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    background: var(--gray-50);
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .toggle-row:hover { border-color: var(--gray-300); }
+  .toggle-row.active {
+    border-color: var(--orange);
+    background: var(--orange-soft);
+  }
+  .toggle-row input[type="checkbox"] { display: none; }
+  .toggle-switch {
+    width: 44px;
+    height: 24px;
+    background: var(--gray-300);
+    border-radius: 12px;
+    position: relative;
+    flex-shrink: 0;
+    transition: background 0.2s;
+  }
+  .toggle-switch::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  }
+  .toggle-row.active .toggle-switch { background: var(--orange); }
+  .toggle-row.active .toggle-switch::after { transform: translateX(20px); }
+  .toggle-row .tx {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    flex: 1;
+  }
+  .toggle-row .tx .sub {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--gray-500);
+    margin-top: 2px;
+  }
+  .toggle-extra {
+    margin-top: 10px;
+    padding: 14px;
+    background: #fff;
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    display: none;
+  }
+  .toggle-extra.show { display: block; }
+
+  /* ======= LIVE RESULT BAR ======= */
+  .live-result {
+    position: sticky;
+    bottom: 16px;
+    margin: 24px 16px;
+    padding: 16px 20px;
+    background: var(--navy);
+    color: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    z-index: 100;
+  }
+  .live-result .lr-info { flex: 1; min-width: 180px; }
+  .live-result .lr-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.65;
+  }
+  .live-result .lr-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+    margin-top: 2px;
+  }
+  .live-result .lr-btn {
+    padding: 12px 22px;
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+  .live-result .lr-btn:hover {
+    background: var(--orange-dark);
+    transform: translateY(-1px);
+  }
+
+  /* ======= RESULTS ======= */
+  .results {
+    display: none;
+    margin: 0 40px 40px;
+    padding: 32px;
+    background: linear-gradient(135deg, var(--gray-50) 0%, #fff 100%);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--gray-200);
+  }
+  .results.show { display: block; animation: slideUp 0.4s ease; }
+  @media (max-width: 700px) { .results { margin: 0 16px 24px; padding: 20px; } }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .res-headline {
+    text-align: center;
+    margin-bottom: 28px;
+    padding: 28px 24px;
+    background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+    color: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+  }
+  .res-headline::before {
+    content: '';
+    position: absolute;
+    top: -20px; right: -20px;
+    width: 120px; height: 120px;
+    background: radial-gradient(circle, rgba(243,146,0,0.2), transparent);
+    border-radius: 50%;
+  }
+  .res-headline .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.7;
+  }
+  .res-headline .kw {
+    font-size: 64px;
+    font-weight: 800;
+    color: var(--orange);
+    line-height: 1;
+    margin: 8px 0 4px;
+    letter-spacing: -2px;
+  }
+  .res-headline .specific {
+    font-size: 14px;
+    opacity: 0.85;
+  }
+
+  /* Metric cards */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .metric {
+    padding: 16px 14px;
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    text-align: center;
+  }
+  .metric .mlabel {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--gray-500);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .metric .mvalue {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.1;
+  }
+  .metric .munit {
+    font-size: 12px;
+    color: var(--gray-500);
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .metric.green .mvalue { color: var(--green); }
+  .metric.orange .mvalue { color: var(--orange); }
+
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    background: var(--gray-100);
+    padding: 4px;
+    border-radius: var(--radius-md);
+    margin-bottom: 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tab {
+    padding: 10px 16px;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-600);
+    transition: all 0.15s;
+    white-space: nowrap;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .tab:hover { color: var(--navy); }
+  .tab.active {
+    background: #fff;
+    color: var(--navy);
+    box-shadow: var(--shadow-sm);
+  }
+  .tab .count {
+    background: var(--gray-200);
+    color: var(--gray-700);
+    font-size: 11px;
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-weight: 700;
+  }
+  .tab.active .count { background: var(--orange); color: #fff; }
+
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* Product cards */
+  .prod-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 14px;
+  }
+  .prod {
+    padding: 18px;
+    background: #fff;
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    transition: all 0.15s;
+    position: relative;
+  }
+  .prod:hover { border-color: var(--orange); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .prod.recommended {
+    border-color: var(--orange);
+    background: linear-gradient(135deg, var(--orange-soft) 0%, #fff 100%);
+  }
+  .prod .badge {
+    position: absolute;
+    top: -10px;
+    right: 14px;
+    background: var(--orange);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow-orange);
+  }
+  .prod-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .prod-power {
+    font-size: 13px;
+    color: var(--orange);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .prod-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .prod-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 10px;
+    background: var(--navy-soft);
+    color: var(--navy);
+  }
+  .prod-tag.eco { background: var(--green-soft); color: var(--green); }
+  .prod-tag.hot { background: var(--red-soft); color: var(--red); }
+  .prod-tag.cool { background: var(--blue-soft); color: var(--blue); }
+  .prod-tag.premium { background: #f3e5f5; color: #7b1fa2; }
+  .prod-desc {
+    font-size: 13px;
+    color: var(--gray-600);
+    line-height: 1.55;
+  }
+
+  /* Empty tab state */
+  .empty-tab {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--gray-500);
+    font-size: 14px;
+  }
+  .empty-tab .em-ico {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 10px;
+    opacity: 0.5;
+  }
+
+  /* CTA at bottom */
+  .res-cta {
+    margin-top: 28px;
+    padding: 26px;
+    background: linear-gradient(135deg, var(--orange-soft) 0%, #fff8eb 100%);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    border: 1.5px dashed var(--orange);
+  }
+  .res-cta h3 {
+    font-size: 18px;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .res-cta p {
+    font-size: 14px;
+    color: var(--gray-600);
+    margin-bottom: 16px;
+  }
+  .res-cta .btns {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .res-cta a {
+    display: inline-block;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.15s;
+  }
+  .res-cta a.primary {
+    background: var(--navy);
+    color: #fff;
+  }
+  .res-cta a.primary:hover { background: var(--navy-dark); transform: translateY(-1px); }
+  .res-cta a.secondary {
+    background: #fff;
+    color: var(--navy);
+    border: 1.5px solid var(--gray-200);
+  }
+  .res-cta a.secondary:hover { border-color: var(--navy); }
+
+  /* Disclaimer */
+  .footer-note {
+    margin-top: 24px;
+    padding: 16px;
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+    font-size: 12px;
+    color: var(--gray-500);
+    line-height: 1.6;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">⚡ V2 · Calculator HVAC Avansat</div>
+    <h1>Află în 60 de secunde sistemul <span>HVAC Clivet</span> potrivit pentru locuința sau afacerea ta</h1>
+    <p>Calculator complet pentru dimensionarea pompelor de căldură, ventiloconvectoarelor, recuperatoarelor de căldură, sistemelor de apă caldă menajeră și stocării energiei — cu recomandări din întreaga gamă Clivet pe care RIXAIR o distribuie în România.</p>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-label">Categorii produs</div>
+        <div class="hero-stat-value">8+</div>
+      </div>
+      <div>
+        <div class="hero-stat-label">Produse Clivet</div>
+        <div class="hero-stat-value">40+</div>
+      </div>
+      <div>
+        <div class="hero-stat-label">Zone climaterice</div>
+        <div class="hero-stat-value">5</div>
+      </div>
+      <div>
+        <div class="hero-stat-label">Norme aplicate</div>
+        <div class="hero-stat-value">NP-051</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-body">
+    <form id="calc">
+
+      <!-- SECTION 1: LOCAȚIE -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">1</div>
+          <div>
+            <div class="section-title">Locația și dimensiunile</div>
+            <div class="section-subtitle">Suprafața de încălzit/răcit și zona climaterică</div>
+          </div>
+        </div>
+        <div class="fields-2col">
+          <div>
+            <span class="field-label">Suprafață utilă</span>
+            <p class="field-hint">Camerele încălzite/răcite — exclusiv balcoane, garaj, pivniță.</p>
+            <div class="num-input">
+              <input type="number" id="area" min="10" max="3000" step="1" placeholder="ex: 120" value="120" required>
+              <span class="unit">m²</span>
+            </div>
+          </div>
+          <div>
+            <span class="field-label">Înălțime tavan</span>
+            <p class="field-hint">Standard rezidențial 2,7 m. Casele vechi pot avea 3 m.</p>
+            <div class="num-input">
+              <input type="number" id="height" min="2" max="6" step="0.1" value="2.7" required>
+              <span class="unit">m</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 18px;">
+          <span class="field-label">Zonă climaterică (NP-051 / I-23)</span>
+          <p class="field-hint">Alege orașul cel mai apropiat de tine. Temperatura externă de proiectare e între paranteze.</p>
+          <div class="climate-grid" id="climate-grid"></div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: CONSTRUCȚIE -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">2</div>
+          <div>
+            <div class="section-title">Construcția și izolația</div>
+            <div class="section-subtitle">Materialele și grosimea izolației — factorii principali ai pierderilor termice</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 22px;">
+          <span class="field-label">Material pereți exteriori</span>
+          <p class="field-hint">Tipul predominant al pereților exteriori (anvelopa clădirii).</p>
+          <div class="cards-grid" id="wall-mat-grid"></div>
+        </div>
+
+        <div style="margin-bottom: 22px;">
+          <span class="field-label">Izolație pereți (termosistem)</span>
+          <p class="field-hint">Polistiren expandat (EPS), polistiren extrudat (XPS) sau vată minerală.</p>
+          <div class="cards-grid" id="wall-insul-grid"></div>
+        </div>
+
+        <div style="margin-bottom: 22px;">
+          <span class="field-label">Izolație tavan / pod</span>
+          <p class="field-hint">Vată minerală sau polistiren la planșeul superior.</p>
+          <div class="cards-grid" id="ceiling-insul-grid"></div>
+        </div>
+
+        <div>
+          <span class="field-label">Suprafață vitrată (ferestre)</span>
+          <p class="field-hint">Cât din suprafața fațadei e ocupată de geamuri.</p>
+          <div class="cards-grid" id="windows-grid"></div>
+        </div>
+      </div>
+
+      <!-- SECTION 3: APLICAȚIE -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">3</div>
+          <div>
+            <div class="section-title">Aplicația și opțiunile</div>
+            <div class="section-subtitle">Tip sistem, distribuție, apă caldă și extras</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 22px;">
+          <span class="field-label">Doresc echipament pentru</span>
+          <p class="field-hint">Determină dacă recomandăm pompă de căldură, splituri AC sau ambele.</p>
+          <div class="app-radio" id="app-radio"></div>
+        </div>
+
+        <div style="margin-bottom: 22px;">
+          <span class="field-label">Sistem de distribuție</span>
+          <p class="field-hint">Cum se distribuie căldura în casă — influențează temperatura agentului termic.</p>
+          <div class="cards-grid" id="dist-grid"></div>
+        </div>
+
+        <div style="margin-bottom: 14px;">
+          <label class="toggle-row" id="acm-toggle">
+            <input type="checkbox" id="acm">
+            <div class="toggle-switch"></div>
+            <div class="tx">
+              Doresc și prepararea apei calde menajere (ACM)
+              <span class="sub">Adaugă boiler 190L / 250L sau pompă de căldură dedicată</span>
+            </div>
+          </label>
+          <div class="toggle-extra" id="acm-extra">
+            <span class="field-label">Număr persoane în locuință</span>
+            <p class="field-hint">Estimăm 50L apă caldă/persoană/zi.</p>
+            <div class="num-input">
+              <input type="number" id="persons" min="1" max="20" step="1" value="4">
+              <span class="unit">pers</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 14px;">
+          <label class="toggle-row" id="hrv-toggle">
+            <input type="checkbox" id="hrv">
+            <div class="toggle-switch"></div>
+            <div class="tx">
+              Doresc și ventilație cu recuperare de căldură (HRV)
+              <span class="sub">Aer proaspăt filtrat cu recuperarea a 80-90% din energie — esențial pentru case NZEB</span>
+            </div>
+          </label>
+        </div>
+
+        <div>
+          <label class="toggle-row" id="pv-toggle">
+            <input type="checkbox" id="pv">
+            <div class="toggle-switch"></div>
+            <div class="tx">
+              Doresc și stocare energie solară (sistem fotovoltaic)
+              <span class="sub">Invertor hibrid + baterii pentru autonomie energetică și optimizare consum HVAC</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- LIVE RESULT BAR -->
+  <div class="live-result" id="liveResult">
+    <div class="lr-info">
+      <div class="lr-label">Putere termică estimată</div>
+      <div class="lr-value"><span id="liveKW">0,0</span> kW</div>
+    </div>
+    <button type="button" class="lr-btn" id="seeResultsBtn">Vezi recomandări complete ↓</button>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="results" id="results">
+    <div class="res-headline">
+      <div class="label">Putere termică recomandată</div>
+      <div class="kw"><span id="kwBig">0</span> kW</div>
+      <div class="specific" id="specific"></div>
+    </div>
+
+    <div class="metrics-grid" id="metricsGrid"></div>
+
+    <div class="tabs" id="tabs"></div>
+    <div id="tabContents"></div>
+
+    <div class="res-cta">
+      <h3>Vrei un consultant tehnic care să-ți confirme alegerea?</h3>
+      <p>Echipa RIXAIR îți face vizionarea proiectului, dimensionare detaliată și ofertă personalizată — gratuit.</p>
+      <div class="btns">
+        <a href="mailto:office@rixar.ro?subject=Solicitare%20oferta%20HVAC%20-%20din%20Calculator%20V2&body=Buna%20ziua%2C%20am%20folosit%20calculatorul%20HVAC%20avansat%20de%20pe%20site%20si%20doresc%20o%20oferta%20personalizata." class="primary">📧 office@rixar.ro</a>
+        <a href="tel:+40722975518" class="secondary">📞 0722 975 518</a>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      Calculul este orientativ, bazat pe normele NP-051-2000 / I-23-2014 și valori medii de încărcare termică. Pentru dimensionare exactă conform SR EN 12831 (calculul detaliat al pierderilor) este necesar auditul termic al clădirii. RIXAIR oferă consultanță tehnică gratuită pentru toate proiectele.
+    </div>
+  </div>
+
+</div>
+
+<script>
+// =============================================================================
+// COEFICIENȚI DE CALCUL
+// =============================================================================
+const COEFF = {
+  // Putere specifică de bază pentru încălzire (W/m²) per zonă
+  heatBase: { '1': 50, '2': 60, '3': 70, '4': 85, '5': 100 },
+  // Putere specifică de bază pentru răcire (W/m²) per zonă
+  coolBase: { '1': 110, '2': 105, '3': 100, '4': 90, '5': 80 },
+
+  wallMaterial: {
+    'bca':            { mult: 0.85, name: 'BCA',             sub: 'Beton celular',     ico: '🧱' },
+    'caramida_goluri':{ mult: 0.85, name: 'Cărămidă goluri', sub: 'Porotherm, etc.',   ico: '🧱' },
+    'caramida_plina': { mult: 1.00, name: 'Cărămidă plină',  sub: 'Standard vechi',    ico: '🟫' },
+    'beton':          { mult: 1.20, name: 'Beton armat',     sub: 'Bloc / casă veche', ico: '⬜' },
+    'lemn':           { mult: 0.85, name: 'Lemn / struct.',  sub: 'Casă pe structură', ico: '🪵' },
+    'sandwich':       { mult: 0.70, name: 'Panou sandwich',  sub: 'Pre-izolat',        ico: '📐' }
+  },
+  wallInsulation: {
+    'fara':  { mult: 1.40, name: 'Fără izolație', fill: 0,   sub: '0 cm'  },
+    '5cm':   { mult: 1.00, name: 'Polistiren',    fill: 25,  sub: '5 cm'  },
+    '10cm':  { mult: 0.70, name: 'Polistiren',    fill: 50,  sub: '10 cm' },
+    '15cm':  { mult: 0.55, name: 'Termosistem',   fill: 75,  sub: '15-20 cm' },
+    'pasiv': { mult: 0.40, name: 'Casă pasivă',   fill: 100, sub: '25 cm+ NZEB' }
+  },
+  ceilingInsulation: {
+    'fara':  { mult: 1.15, name: 'Fără izolație', fill: 0,   sub: '0 cm' },
+    '10cm':  { mult: 1.00, name: 'Vată minerală', fill: 33,  sub: '10 cm' },
+    '20cm':  { mult: 0.90, name: 'Vată minerală', fill: 66,  sub: '20 cm' },
+    '30cm':  { mult: 0.80, name: 'Vată groasă',   fill: 100, sub: '30 cm+' }
+  },
+  windows: {
+    'mica':   { mult: 0.92, name: 'Mică',   sub: '< 15% fațadă',   ico: '▫️' },
+    'medie':  { mult: 1.00, name: 'Medie',  sub: '15-25% fațadă',  ico: '◻️' },
+    'mare':   { mult: 1.10, name: 'Mare',   sub: '25-40% fațadă',  ico: '⬜' },
+    'foarte': { mult: 1.20, name: 'F. mare',sub: '> 40% (sticlă)', ico: '🪟' }
+  },
+  distribution: {
+    'pardoseala':       { mult: 0.95, temp: 35, name: 'Pardoseală',         sub: '35°C agent',   ico: '🟧' },
+    'ventiloconvector': { mult: 0.98, temp: 45, name: 'Ventiloconvector',   sub: '45°C agent',   ico: '💨' },
+    'radiator_lt':      { mult: 1.00, temp: 50, name: 'Radiator LT',        sub: '50°C agent',   ico: '🪞' },
+    'radiator_ht':      { mult: 1.05, temp: 65, name: 'Radiator clasic',    sub: '65°C agent',   ico: '🔥' }
+  },
+  climate: [
+    { v: '1', name: 'Zona I',   temp: '-12°C', cities: 'Constanța, Litoral, Mangalia', dot: '#fcd34d' },
+    { v: '2', name: 'Zona II',  temp: '-15°C', cities: 'Timișoara, Arad, Oradea, Craiova', dot: '#fb923c' },
+    { v: '3', name: 'Zona III', temp: '-18°C', cities: 'București, Cluj, Iași, Brașov', dot: '#f97316' },
+    { v: '4', name: 'Zona IV',  temp: '-21°C', cities: 'Bacău, Suceava, Sibiu altitudine', dot: '#dc2626' },
+    { v: '5', name: 'Zona V',   temp: '-24°C', cities: 'Zone montane > 1000m', dot: '#7f1d1d' }
+  ],
+  applications: [
+    { v: 'heating', name: 'Doar încălzire', sub: 'Pompă de căldură', ico: '🔥' },
+    { v: 'cooling', name: 'Doar răcire',    sub: 'Splituri AC',      ico: '❄️' },
+    { v: 'both',    name: 'Încălzire + Răcire', sub: 'Pompă reversibilă', ico: '🔥❄️' }
+  ]
+};
+
+function heightFactor(h) { return Math.max(0.85, Math.min(1.25, h / 2.7)); }
+
+// =============================================================================
+// CATALOG COMPLET PRODUSE CLIVET (toate familiile distribuite de Rixar)
+// =============================================================================
+const CATALOG = {
+  // ========== POMPE DE CĂLDURĂ AER-APĂ ==========
+  heatPumps: [
+    // Sphera EVO 2.0 Split (R-32) - 2.1 to 8.1 kW
+    { kw: 2.1, family: 'Sphera EVO 2.0 + MiSAN-YEE 1S 2.1', power: '2,1 kW heating', cat: 'split', refr: 'R-32',  tags: ['Split', 'R-32'], desc: 'Pompă de căldură split aer-apă cu unitate exterioară MiSAN-YEE și unitate internă Sphera EVO 2.0 (Box / Tower / Invisible). Soluție flagship Clivet pentru apartamente și case mici. Compatibilă cu boiler ACM 250L integrat.' },
+    { kw: 4.1, family: 'Sphera EVO 2.0 + MiSAN-YEE 1S 4.1', power: '4,1 kW heating', cat: 'split', refr: 'R-32',  tags: ['Split', 'R-32'], desc: 'Sistem split aer-apă R-32 de 4 kW. Cea mai vândută clasă pentru locuințe 80-120 m². Indoor Box (perete), Tower (cu boiler 250L) sau Invisible (încastrat în mobilă).' },
+    { kw: 6.1, family: 'Sphera EVO 2.0 + MiSAN-YEE 1S 6.1', power: '6,1 kW heating', cat: 'split', refr: 'R-32',  tags: ['Split', 'R-32', 'Top vânzări'], desc: 'Split R-32 de 6 kW — cea mai populară clasă pentru case 100-140 m² în Banat și Crișana. Indoor combinabil cu Tower 250L pentru ACM.' },
+    { kw: 8.1, family: 'Sphera EVO 2.0 + MiSAN-YEE 1S 8.1', power: '8,1 kW heating', cat: 'split', refr: 'R-32',  tags: ['Split', 'R-32'], desc: 'Split R-32 de 8 kW pentru case 130-180 m² sau case cu izolație medie. Combinabil cu indoor Tower (250L ACM) sau Box.' },
+    // Edge EVO 2.0 EXC Monobloc (R-32) - 2.1 to 14.1 kW
+    { kw: 2.1, family: 'Edge EVO 2.0 EXC 2.1 (WiSAN-YME)', power: '2,1 kW heating', cat: 'monoblock', refr: 'R-32', tags: ['Monobloc', 'R-32'], desc: 'Pompă monobloc R-32 cu toate componentele frigorifice în unitatea exterioară. Doar conexiune hidraulică la interior. Instalare rapidă, mentenanță simplă.' },
+    { kw: 4.1, family: 'Edge EVO 2.0 EXC 4.1 (WiSAN-YME)', power: '4,1 kW heating', cat: 'monoblock', refr: 'R-32', tags: ['Monobloc', 'R-32'], desc: 'Monobloc R-32 de 4 kW. Recomandat pentru renovări (fără gas-line interior) și pentru zone cu spațiu interior limitat.' },
+    { kw: 6.1, family: 'Edge EVO 2.0 EXC 6.1 (WiSAN-YME)', power: '6,1 kW heating', cat: 'monoblock', refr: 'R-32', tags: ['Monobloc', 'R-32'], desc: 'Monobloc R-32 de 6 kW — cea mai cerută variantă monobloc pentru case în zona III (București, Cluj, Brașov).' },
+    { kw: 8.1, family: 'Edge EVO 2.0 EXC 8.1 (WiSAN-YME)', power: '8,1 kW heating', cat: 'monoblock', refr: 'R-32', tags: ['Monobloc', 'R-32'], desc: 'Monobloc R-32 de 8 kW. Conectare hidraulică doar prin țevi cu apă — fără manipulare freon la instalare.' },
+    { kw: 12.1, family: 'Edge EVO 2.0 EXC 12.1 (WiSAN-YME)', power: '12,1 kW heating', cat: 'monoblock', refr: 'R-32', tags: ['Monobloc', 'R-32'], desc: 'Monobloc R-32 de 12 kW pentru case mari (180-250 m²) sau case cu izolație medie din zone reci.' },
+    { kw: 14.1, family: 'Edge EVO 2.0 EXC 14.1 (WiSAN-YME)', power: '14,1 kW heating', cat: 'monoblock', refr: 'R-32', tags: ['Monobloc', 'R-32'], desc: 'Monobloc R-32 de 14 kW pentru vile, pensiuni mici sau aplicații comerciale rezidențiale.' },
+    // Edge F Monobloc (R-290 propan) - 2.1 to 8.1 kW
+    { kw: 2.1, family: 'Edge F WiSAN-PME 2.1 (R-290)', power: '2,1 kW heating', cat: 'monoblock-r290', refr: 'R-290', tags: ['Monobloc', 'R-290 Eco', 'GWP=3'], desc: 'Monobloc propan R-290 (GWP=3, refrigerant natural). Cea mai eficientă opțiune pentru climat rece (-25°C). Compatibilă "Casa Verde Plus".' },
+    { kw: 4.1, family: 'Edge F WiSAN-PME 4.1 (R-290)', power: '4,1 kW heating', cat: 'monoblock-r290', refr: 'R-290', tags: ['Monobloc', 'R-290 Eco'], desc: 'Monobloc R-290 de 4 kW. Performanță superioară la temperaturi negative, ideal pentru zonele III-V.' },
+    { kw: 6.1, family: 'Edge F WiSAN-PME 6.1 (R-290)', power: '6,1 kW heating', cat: 'monoblock-r290', refr: 'R-290', tags: ['Monobloc', 'R-290 Eco'], desc: 'Monobloc propan 6 kW. COP până la 5,2 în condiții nominale. Refrigerant cu impact climatic minim.' },
+    { kw: 8.1, family: 'Edge F WiSAN-PME 8.1 (R-290)', power: '8,1 kW heating', cat: 'monoblock-r290', refr: 'R-290', tags: ['Monobloc', 'R-290 Eco', 'Top eco'], desc: 'Monobloc R-290 de 8 kW — top of class pentru randament și sustenabilitate. Funcționează eficient până la -25°C.' },
+    // Edge PRO (R-290) - 12.1 to 20.1 kW
+    { kw: 12.1, family: 'Edge PRO WiSAN-PMP 12.1', power: '12,1 kW heating', cat: 'monoblock-r290', refr: 'R-290', tags: ['Premium', 'R-290 Eco'], desc: 'Pompă R-290 premium 12 kW, foarte silențioasă (presiune sonoră < 35 dB(A) la 5m). Recomandată zone rezidențiale liniștite.' },
+    { kw: 14.1, family: 'Edge PRO WiSAN-PMP 14.1', power: '14,1 kW heating', cat: 'monoblock-r290', refr: 'R-290', tags: ['Premium', 'R-290 Eco'], desc: 'Premium R-290 14 kW. Eficiență maximă chiar și la -20°C. Indicată pentru case mari, izolate corespunzător.' },
+    { kw: 20.1, family: 'Edge PRO WiSAN-PMP 20.1', power: '20,1 kW heating', cat: 'monoblock-r290', refr: 'R-290', tags: ['Premium', 'R-290 Eco', 'XL'], desc: 'Premium R-290 20 kW. Vile mari sau aplicații rezidențiale extinse.' },
+    // Thunder (R-290 commercial) - 18 to 30 kW
+    { kw: 18.1, family: 'Thunder WiSAN-P 18.1', power: '18 kW heating', cat: 'commercial', refr: 'R-290', tags: ['Commercial', 'R-290'], desc: 'Pompă comercială R-290 18 kW. Pentru pensiuni, clădiri colective mici, hale.' },
+    { kw: 20.1, family: 'Thunder WiSAN-P 20.1', power: '20 kW heating', cat: 'commercial', refr: 'R-290', tags: ['Commercial', 'R-290'], desc: 'Pompă comercială R-290 20 kW pentru aplicații medii rezidențial-comerciale.' },
+    { kw: 30.1, family: 'Thunder WiSAN-P 30.1', power: '30 kW heating', cat: 'commercial', refr: 'R-290', tags: ['Industrial', 'R-290'], desc: 'Pompă industrială R-290 30 kW pentru clădiri mari, hale, hoteluri.' },
+    // Hybrid
+    { kw: 6.1, family: 'EasyHybrid (Sphera + FE 24.4 gaz)', power: '6 + 24 kW', cat: 'hybrid', refr: 'R-32 + gaz', tags: ['Hybrid', 'Gaz backup'], desc: 'Sistem hibrid pompă de căldură + cazan gaz în condensație FE 24.4. Optimizare automată între cele două surse după prețul energiei și temperatura externă.' }
+  ],
+
+  // ========== UNITĂȚI INTERNE SPHERA (pentru sisteme split) ==========
+  indoorSphera: [
+    { family: 'Sphera EVO 2.0 BOX', desc: 'Unitate internă perete, instalare clasică. Display TFT, control intuitiv. Pentru sisteme 2.1-8.1 kW.', tags: ['Indoor', 'Wall', 'Compact'] },
+    { family: 'Sphera EVO 2.0 TOWER (250L)', desc: 'Unitate internă vertical (mobilier integrat) cu boiler ACM 250L + rezistență electrică 9 kW backup. Soluție completă într-o singură unitate.', tags: ['Indoor', 'ACM 250L', 'Backup 9kW'] },
+    { family: 'Sphera EVO 2.0 INVISIBLE', desc: 'Unitate internă încastrabilă în mobilier sau perete (panou ascuns). Ideal pentru proiecte arhitecturale premium.', tags: ['Indoor', 'Premium', 'Hidden'] },
+    { family: 'Sphera EVO 2.0 EasyHybrid Box', desc: 'Box pentru sistem hibrid pompă de căldură + cazan gaz. Conexiune Wi-Fi cu management între cele două surse.', tags: ['Indoor', 'Hybrid', 'Smart'] }
+  ],
+
+  // ========== SPLITURI AER CONDIȚIONAT ==========
+  splits: [
+    { btu: 9000,  kw: 2.6, family: 'EZCool 9000 BTU',     line: 'standard', tags: ['Split AC', '9k BTU', 'Wi-Fi'], desc: 'Split inverter 9000 BTU R-32 cu Wi-Fi. Răcire/încălzire (heat pump). Camere 15-25 m². Cea mai bună valoare la preț.' },
+    { btu: 9000,  kw: 2.6, family: 'Cristallo 2 — 9k BTU',line: 'design',   tags: ['Split AC', 'Premium Design'], desc: 'Split premium cu panou frontal din cristal. 9000 BTU R-32 inverter. Liniile arhitecturale subtile pentru living-uri.' },
+    { btu: 9000,  kw: 2.6, family: 'Stelvio 9000 BTU',    line: 'standard', tags: ['Split AC', 'Best price'], desc: 'Linia clasică Clivet, raport calitate-preț. 9000 BTU R-32. Funcții esențiale, fără extras.' },
+    { btu: 9000,  kw: 2.6, family: 'Essential 2 — 9k BTU',line: 'standard', tags: ['Split AC', 'Compact'], desc: 'Versiunea compactă, 9000 BTU R-32. Indicat pentru dormitoare și birouri mici.' },
+    { btu: 9000,  kw: 2.6, family: 'NATIV 9000 BTU',      line: 'standard', tags: ['Split AC', 'Eco mode'], desc: 'NATIV 9000 BTU R-32 cu mod eco și consum redus în standby. Răcire/încălzire.' },
+    { btu: 12000, kw: 3.5, family: 'EZCool 12000 BTU',    line: 'standard', tags: ['Split AC', '12k BTU', 'Wi-Fi'], desc: 'Split inverter 12000 BTU R-32 cu Wi-Fi. Camere 25-40 m².' },
+    { btu: 12000, kw: 3.5, family: 'Cristallo 2 — 12k BTU',line: 'design',  tags: ['Split AC', 'Premium Design'], desc: 'Premium design cristal, 12000 BTU inverter R-32.' },
+    { btu: 18000, kw: 5.3, family: 'EZCool 18000 BTU',    line: 'standard', tags: ['Split AC', '18k BTU', 'Wi-Fi'], desc: 'Split inverter 18000 BTU R-32. Living-uri și open-space-uri 35-55 m².' },
+    { btu: 18000, kw: 5.3, family: 'Cristallo 2 — 18k BTU',line: 'design',  tags: ['Split AC', 'Premium Design'], desc: 'Premium 18000 BTU, design cristal. Excelent pentru living-uri spațioase.' },
+    { btu: 24000, kw: 7.0, family: 'EZCool 24000 BTU',    line: 'standard', tags: ['Split AC', '24k BTU'], desc: 'Split puternic 24000 BTU R-32 pentru spații mari sau parter open-plan.' }
+  ],
+
+  // ========== VENTILOCONVECTOARE (FAN COILS) ==========
+  fanCoils: [
+    { family: 'MOOD CFW (perete)', tags: ['Wall', 'Design', 'Quiet'], desc: 'Ventiloconvector de perete cu design modern, foarte silențios (până la 25 dB). Pentru sisteme cu pompă de căldură. 4 modele de putere.' },
+    { family: 'AURA CFFAU (caseta 4 căi)', tags: ['Cassette 4-way', 'Ceiling'], desc: 'Casetă de tavan 4 căi, integrată în tavanul fals. Distribuție omogenă a aerului. Pentru living-uri sau birouri.' },
+    { family: 'AURA CFFC (tavan)', tags: ['Ceiling', 'Exposed'], desc: 'Ventiloconvector de tavan expus. Soluție pentru spații industriale, hale, depozite reconvertite.' },
+    { family: 'AURA CFFU (pardoseală/perete)', tags: ['Floor', 'Wall'], desc: 'Ventiloconvector de pardoseală sau perete. Flexibilitate maximă de montare în renovări.' },
+    { family: 'AURA CFFAC (cu carcasă)', tags: ['Cassette', 'Compact'], desc: 'Casetă mică cu carcasă proprie pentru tavane fără strat fals. Cea mai compactă variantă.' }
+  ],
+
+  // ========== MULTI-SPLIT ==========
+  multiSplit: [
+    { family: 'BOX-SM2 (multi-split outdoor)', tags: ['Outdoor', 'Multi'], desc: 'Unitate exterioară multi-split pentru 2-5 unități interioare diferite (perete, caseta, duct). O singură unitate exterioară.' },
+    { family: 'CEILING & FLOOR SM2', tags: ['Indoor', 'Flexible'], desc: 'Unități interioare versatile pentru tavan sau pardoseală, conectabile la outdoor BOX-SM2.' },
+    { family: 'Duct SM2', tags: ['Ducted', 'Hidden'], desc: 'Unitate interioară de tubulatură (ascunsă în tavan fals) pentru sistem multi-split. Distribuție prin grile.' }
+  ],
+
+  // ========== VENTILAȚIE ȘI RECUPERARE CĂLDURĂ ==========
+  ventilation: [
+    { family: 'ELFOFresh EVO', tags: ['HRV', '90% recuperare'], desc: 'Recuperator de căldură cu randament 85-92%. Aer proaspăt filtrat permanent. Esențial pentru case NZEB / casă pasivă.' },
+    { family: 'HRV V8 Series', tags: ['HRV', 'Residential'], desc: 'Recuperator rezidențial cu schimbător contracurent ceramic. Debit 200-600 m³/h, ideal pentru locuințe 100-250 m².' },
+    { family: 'HRV-DX (pentru VRF)', tags: ['HRV', 'VRF integrat'], desc: 'Recuperator combinat cu sistem VRF. Pre-tratează aerul proaspăt înainte de a fi distribuit. Pentru aplicații comerciale.' },
+    { family: 'CiSDN-Y EF (purifying)', tags: ['HRV', 'Filtrare avansată'], desc: 'Recuperator cu filtrare H13 (HEPA), purifică aerul de praf, polen, viruși. Recomandat alergici și familii cu copii.' },
+    { family: 'ELFO FRESH 2', tags: ['HRV', 'Compact'], desc: 'Recuperator compact pentru apartamente sau locuințe mici. Montaj simplu, control Wi-Fi.' }
+  ],
+
+  // ========== APĂ CALDĂ MENAJERĂ (ACM) ==========
+  dhw: [
+    { family: 'Sphera EVO 2.0 TOWER 250L', tags: ['ACM 250L', 'Integrat', '4-5 pers'], desc: 'Unitate internă pompă de căldură + boiler 250L într-o singură carcasă. Cea mai elegantă soluție când deja ai pompă de căldură pentru încălzire.' },
+    { family: 'AQUA SWAN (HP boiler)', tags: ['ACM dedicat', 'Pompă căldură'], desc: 'Boiler cu pompă de căldură integrată dedicată ACM. Independent de sistemul de încălzire. Disponibil 200L și 270L.' },
+    { family: 'DSDH-P AQ 1S 190 (190L)', tags: ['ACM 190L', 'Serpentina'], desc: 'Boiler 190L cu serpentină pentru conectare la pompă de căldură sau cazan gaz. Pentru locuințe 2-3 persoane.' },
+    { family: 'ACS150X / AC50X (acumulatoare)', tags: ['Tank', 'Buffer'], desc: 'Boilere/acumulatoare 50L și 150L pentru sistem hidraulic complex. Folosite ca rezervor tampon (buffer) pentru pompele de căldură.' }
+  ],
+
+  // ========== CHILLERE (APPLIED) — pentru aplicații >30 kW ==========
+  chillers: [
+    { family: 'WSAT-YSC4 (cooling-only)', tags: ['Chiller', '40-200 kW', 'Outdoor'], desc: 'Chiller aer-apă cooling-only pentru clădiri comerciale, industriale, hale. Game 40-200 kW.' },
+    { family: 'WSAT-YSC4 HP (reversibil)', tags: ['Chiller HP', 'Reversibil'], desc: 'Chiller cu pompă de căldură integrată — răcire vara, încălzire iarna. Pentru hoteluri, birouri, mall-uri.' },
+    { family: 'WSAN-YSC4', tags: ['Chiller', 'Silent'], desc: 'Chiller silenced pentru zone rezidențiale unde se cere zgomot redus.' },
+    { family: 'WDAT-iZ4 / WDAT-iK4', tags: ['Chiller industrial', 'Hală'], desc: 'Chiller industrial pentru hale de producție (folosit la AUMOVIO și Continental Timișoara).' },
+    { family: 'WiSAT-YSi (16-43 kW)', tags: ['Chiller mic', 'Compact'], desc: 'Chiller compact 16-43 kW pentru hale mici, ateliere, restaurante.' }
+  ],
+
+  // ========== STOCARE ENERGIE / FOTOVOLTAIC ==========
+  storage: [
+    { family: 'SINERGY 51 (5 kW invertor hibrid)', tags: ['Inverter', 'Hybrid', '5 kW'], desc: 'Invertor hibrid fotovoltaic 5 kW. Gestionează panourile PV + bateriile + rețeaua. Compatibilitate Wi-Fi pentru control HVAC integrat.' },
+    { family: 'CEC-S B 5K (baterie 5 kWh)', tags: ['Battery', 'LiFePO4', '5 kWh'], desc: 'Modul baterie LiFePO4 5 kWh. Stackable până la 20 kWh (4 module). Compatibil SINERGY 51.' },
+    { family: 'CEC-S B 10K (baterie 10 kWh)', tags: ['Battery', '10 kWh', 'XL'], desc: 'Modul baterie 10 kWh pentru sisteme PV de capacitate mai mare.' }
+  ],
+
+  // ========== SISTEME DE COMANDĂ ==========
+  controls: [
+    { family: 'Control4 NRG (Wi-Fi)', tags: ['Wi-Fi', 'App', 'Smart'], desc: 'Sistem de comandă centralizat cu Wi-Fi pentru întreaga gamă Clivet. Aplicație mobilă (iOS/Android), programare zilnică, grafice consum.' },
+    { family: 'HID-TConnect 2', tags: ['Wired', 'Touch'], desc: 'Termostat tactil cu fir pentru control unități individuale. Display HD, control multi-zonă.' },
+    { family: 'HID-TSmart', tags: ['Wireless', 'Smart Home'], desc: 'Termostat smart compatibil cu Apple HomeKit, Google Home, Alexa.' },
+    { family: 'KJRH-120L', tags: ['Wired', 'Multi-unit'], desc: 'Termostat de perete cu fir pentru controlul a 1-16 unități interioare în paralel.' },
+    { family: 'HMIFACX / HMIFDCX', tags: ['Electromechanical'], desc: 'Comenzi electromecanice clasice (cu fir, fără afișaj digital) pentru aplicații simple sau de înlocuire.' }
+  ]
+};
+
+// =============================================================================
+// LOGICA DE CALCUL
+// =============================================================================
+function calculate(inp) {
+  const wm = COEFF.wallMaterial[inp.wallMat].mult;
+  const wi = COEFF.wallInsulation[inp.wallInsul].mult;
+  const ci = COEFF.ceilingInsulation[inp.ceilInsul].mult;
+  const win = COEFF.windows[inp.win].mult;
+  const dist = COEFF.distribution[inp.dist].mult;
+  const hf = heightFactor(inp.height);
+
+  let heatingW = 0, coolingW = 0;
+  if (inp.app === 'heating' || inp.app === 'both') {
+    heatingW = inp.area * COEFF.heatBase[inp.zone] * wm * wi * ci * win * dist * hf * 1.10;
+    if (inp.acm) heatingW += 1500; // +1.5 kW pentru ACM
+  }
+  if (inp.app === 'cooling' || inp.app === 'both') {
+    coolingW = inp.area * COEFF.coolBase[inp.zone] * wm * wi * ci * win * hf * 1.10;
+  }
+  const mainKW = Math.max(heatingW, coolingW) / 1000;
+
+  // Estimări consum și cost anual (Romania, 2026)
+  // SCOP heat pump = 4.0 estimat
+  // Ore încălzire/an per zonă
+  const heatHours = { '1': 1400, '2': 1800, '3': 2100, '4': 2400, '5': 2700 }[inp.zone];
+  const annualHeatKWh = (heatingW / 1000) * heatHours * 0.42; // factor utilizare
+  const annualElecKWh = annualHeatKWh / 4.0; // SCOP 4
+  const annualCostRON = annualElecKWh * 0.85; // 0.85 RON/kWh medie 2026
+  const annualCostGazRON = annualHeatKWh / 9.5 * 4.2; // alternativă pe gaz (9.5 kWh/m³, 4.2 RON/m³)
+  const co2SavedKg = annualHeatKWh * 0.18; // 0.18 kg CO2/kWh economisit vs gaz
+
+  return {
+    heatingKW: heatingW / 1000,
+    coolingKW: coolingW / 1000,
+    mainKW: mainKW,
+    specificH: heatingW > 0 ? Math.round(heatingW / inp.area) : 0,
+    specificC: coolingW > 0 ? Math.round(coolingW / inp.area) : 0,
+    annualHeatKWh: Math.round(annualHeatKWh),
+    annualElecKWh: Math.round(annualElecKWh),
+    annualCostRON: Math.round(annualCostRON),
+    annualCostGazRON: Math.round(annualCostGazRON),
+    annualSavingRON: Math.round(annualCostGazRON - annualCostRON),
+    co2SavedKg: Math.round(co2SavedKg)
+  };
+}
+
+// Selectare clasă pompă de căldură
+function pickHeatPumpClass(kW) {
+  const classes = [2.1, 4.1, 6.1, 8.1, 12.1, 14.1, 18.1, 20.1, 30.1];
+  for (const c of classes) if (c >= kW) return c;
+  return 30.1;
+}
+
+// =============================================================================
+// RENDER FORM DINAMIC
+// =============================================================================
+const state = {
+  area: 120, height: 2.7, zone: '2', wallMat: 'caramida_goluri', wallInsul: '10cm',
+  ceilInsul: '20cm', win: 'medie', app: 'heating', dist: 'pardoseala',
+  acm: false, persons: 4, hrv: false, pv: false
+};
+
+function makeOptCard(group, value, name, sub, icoOrFill, checked) {
+  let visual;
+  if (typeof icoOrFill === 'string') {
+    visual = `<span class="ico">${icoOrFill}</span>`;
+  } else {
+    visual = `<div class="insul-bar"><div class="fill" style="width:${icoOrFill}%"></div></div>`;
+  }
+  return `<label class="opt-card ${checked ? 'checked' : ''}" data-group="${group}" data-value="${value}">
+    <input type="radio" name="${group}" value="${value}" ${checked ? 'checked' : ''}>
+    ${visual}
+    <div class="name">${name}</div>
+    <div class="sub">${sub}</div>
+  </label>`;
+}
+
+function renderForm() {
+  // Climate
+  document.getElementById('climate-grid').innerHTML = COEFF.climate.map(c =>
+    `<label class="climate-card ${c.v === state.zone ? 'checked' : ''}" data-group="zone" data-value="${c.v}">
+      <input type="radio" name="zone" value="${c.v}" ${c.v === state.zone ? 'checked' : ''}>
+      <div class="zname">
+        <span class="dot" style="background:${c.dot}"></span>
+        ${c.name}
+        <span class="ztemp">${c.temp}</span>
+      </div>
+      <div class="zcities">${c.cities}</div>
+    </label>`
+  ).join('');
+
+  // Wall material
+  document.getElementById('wall-mat-grid').innerHTML = Object.entries(COEFF.wallMaterial).map(([k, v]) =>
+    makeOptCard('wallMat', k, v.name, v.sub, v.ico, k === state.wallMat)
+  ).join('');
+
+  // Wall insulation
+  document.getElementById('wall-insul-grid').innerHTML = Object.entries(COEFF.wallInsulation).map(([k, v]) =>
+    makeOptCard('wallInsul', k, v.name, v.sub, v.fill, k === state.wallInsul)
+  ).join('');
+
+  // Ceiling insulation
+  document.getElementById('ceiling-insul-grid').innerHTML = Object.entries(COEFF.ceilingInsulation).map(([k, v]) =>
+    makeOptCard('ceilInsul', k, v.name, v.sub, v.fill, k === state.ceilInsul)
+  ).join('');
+
+  // Windows
+  document.getElementById('windows-grid').innerHTML = Object.entries(COEFF.windows).map(([k, v]) =>
+    makeOptCard('win', k, v.name, v.sub, v.ico, k === state.win)
+  ).join('');
+
+  // Application
+  document.getElementById('app-radio').innerHTML = COEFF.applications.map(a =>
+    `<label class="app-card ${a.v === state.app ? 'checked' : ''}" data-group="app" data-value="${a.v}">
+      <input type="radio" name="app" value="${a.v}" ${a.v === state.app ? 'checked' : ''}>
+      <span class="ico-big">${a.ico}</span>
+      <div class="aname">${a.name}</div>
+      <div class="asub">${a.sub}</div>
+    </label>`
+  ).join('');
+
+  // Distribution
+  document.getElementById('dist-grid').innerHTML = Object.entries(COEFF.distribution).map(([k, v]) =>
+    makeOptCard('dist', k, v.name, v.sub, v.ico, k === state.dist)
+  ).join('');
+
+  // Attach handlers
+  document.querySelectorAll('[data-group]').forEach(el => {
+    el.addEventListener('click', e => {
+      const g = el.dataset.group;
+      const v = el.dataset.value;
+      state[g] = v;
+      // Toggle visual
+      el.parentElement.querySelectorAll(`[data-group="${g}"]`).forEach(s => s.classList.remove('checked'));
+      el.classList.add('checked');
+      updateLive();
+    });
+  });
+}
+
+// Toggle handlers
+function setupToggles() {
+  ['acm', 'hrv', 'pv'].forEach(id => {
+    const row = document.getElementById(id + '-toggle');
+    const cb = document.getElementById(id);
+    row.addEventListener('click', e => {
+      if (e.target === cb) return;
+      e.preventDefault();
+      cb.checked = !cb.checked;
+      state[id] = cb.checked;
+      row.classList.toggle('active', cb.checked);
+      if (id === 'acm') {
+        document.getElementById('acm-extra').classList.toggle('show', cb.checked);
+      }
+      updateLive();
+    });
+  });
+  ['area', 'height', 'persons'].forEach(id => {
+    document.getElementById(id).addEventListener('input', e => {
+      state[id] = parseFloat(e.target.value) || 0;
+      updateLive();
+    });
+  });
+}
+
+function updateLive() {
+  const result = calculate(state);
+  document.getElementById('liveKW').textContent = result.mainKW.toFixed(1).replace('.', ',');
+}
+
+// =============================================================================
+// RENDER REZULTATE COMPLETE
+// =============================================================================
+function buildRecommendations(state, result) {
+  const recs = {};
+  const isHeating = state.app === 'heating' || state.app === 'both';
+  const isCooling = state.app === 'cooling' || state.app === 'both';
+
+  // === 1. Sistem principal ===
+  recs.main = [];
+  if (isHeating) {
+    const cls = pickHeatPumpClass(result.heatingKW);
+    // Toate variantele clasă (split + monobloc + R-290)
+    const matches = CATALOG.heatPumps.filter(p => p.kw === cls);
+    matches.forEach((p, i) => {
+      const rec = {...p};
+      if (i === 0) rec.recommended = true;
+      recs.main.push(rec);
+    });
+    // Pentru >18 kW, adaugă și Thunder
+    if (cls >= 18) {
+      const commercial = CATALOG.heatPumps.filter(p => p.cat === 'commercial' && p.kw >= cls);
+      commercial.forEach(p => recs.main.push(p));
+    }
+  } else if (isCooling) {
+    // Splituri AC
+    let btu;
+    if (result.coolingKW <= 2.8) btu = 9000;
+    else if (result.coolingKW <= 4.0) btu = 12000;
+    else if (result.coolingKW <= 5.8) btu = 18000;
+    else btu = 24000;
+    recs.main = CATALOG.splits.filter(s => s.btu === btu);
+    if (recs.main.length > 0) recs.main[0].recommended = true;
+  }
+
+  // === 2. Unități interne (pentru split) ===
+  recs.indoor = [];
+  if (isHeating && (state.app === 'heating' || state.app === 'both')) {
+    // Pentru sistem split, propune toate unitățile interne Sphera
+    recs.indoor = CATALOG.indoorSphera.map((u, i) => i === 1 && state.acm ? {...u, recommended: true} : u);
+  }
+
+  // === 3. Distribuție (ventiloconvectoare dacă alege ventilo) ===
+  recs.distribution = [];
+  if (state.dist === 'ventiloconvector') {
+    recs.distribution = CATALOG.fanCoils;
+  }
+
+  // === 4. Apă caldă menajeră ===
+  recs.dhw = [];
+  if (state.acm) {
+    // Adaptat la numărul de persoane
+    const need200 = state.persons >= 4;
+    recs.dhw = CATALOG.dhw.map((d, i) => {
+      const r = {...d};
+      if (i === 0 && need200) r.recommended = true; // Sphera Tower 250L
+      if (i === 2 && !need200) r.recommended = true; // 190L pentru 2-3 pers
+      return r;
+    });
+  }
+
+  // === 5. Ventilație ===
+  recs.ventilation = state.hrv ? CATALOG.ventilation : [];
+  if (recs.ventilation.length > 0) {
+    // Prima alegere depinde de complexitate
+    if (state.wallInsul === 'pasiv') {
+      recs.ventilation[0].recommended = true; // ELFOFresh EVO pentru NZEB
+    } else {
+      recs.ventilation[1] = {...recs.ventilation[1], recommended: true}; // HRV V8 standard
+    }
+  }
+
+  // === 6. Stocare PV ===
+  recs.storage = state.pv ? CATALOG.storage.map((s, i) => i === 0 ? {...s, recommended: true} : s) : [];
+
+  // === 7. Comandă/Control ===
+  recs.controls = CATALOG.controls.slice(0, 3).map((c, i) => i === 0 ? {...c, recommended: true} : c);
+
+  // === 8. Splituri AC suplimentare pentru "both" ===
+  recs.splits = [];
+  if (state.app === 'both') {
+    // Recomandă splituri pentru camere individuale
+    recs.splits = CATALOG.splits.filter(s => s.btu === 9000 || s.btu === 12000);
+  }
+
+  // === 9. Chillere pentru aplicații mari ===
+  recs.chillers = (result.mainKW > 30) ? CATALOG.chillers : [];
+
+  return recs;
+}
+
+function renderProductGrid(products) {
+  if (!products || products.length === 0) return '';
+  return `<div class="prod-grid">` + products.map(p => {
+    const tagClass = (t) => {
+      const tl = t.toLowerCase();
+      if (tl.includes('eco') || tl.includes('r-290') || tl.includes('gwp')) return 'eco';
+      if (tl.includes('hot') || tl.includes('heat') || tl.includes('btu')) return 'hot';
+      if (tl.includes('split ac') || tl.includes('cool')) return 'cool';
+      if (tl.includes('premium') || tl.includes('design')) return 'premium';
+      return '';
+    };
+    return `<div class="prod ${p.recommended ? 'recommended' : ''}">
+      ${p.recommended ? '<span class="badge">⭐ Recomandat</span>' : ''}
+      <div class="prod-name">${p.family}</div>
+      ${p.power ? `<div class="prod-power">${p.power}</div>` : ''}
+      <div class="prod-tags">${(p.tags || []).map(t => `<span class="prod-tag ${tagClass(t)}">${t}</span>`).join('')}</div>
+      <div class="prod-desc">${p.desc}</div>
+    </div>`;
+  }).join('') + `</div>`;
+}
+
+function renderResults() {
+  const result = calculate(state);
+  const recs = buildRecommendations(state, result);
+
+  // Headline
+  document.getElementById('kwBig').textContent = result.mainKW.toFixed(1).replace('.', ',');
+  let specific = '';
+  if (state.app === 'heating') {
+    specific = `Putere specifică încălzire: ${result.specificH} W/m²`;
+  } else if (state.app === 'cooling') {
+    specific = `Putere specifică răcire: ${result.specificC} W/m²`;
+  } else {
+    specific = `Încălzire: ${result.heatingKW.toFixed(1).replace('.', ',')} kW · Răcire: ${result.coolingKW.toFixed(1).replace('.', ',')} kW`;
+  }
+  document.getElementById('specific').textContent = specific;
+
+  // Metrics
+  const metricsHtml = [];
+  if (result.heatingKW > 0) {
+    metricsHtml.push(`<div class="metric"><div class="mlabel">Energie anuală</div><div class="mvalue">${result.annualHeatKWh.toLocaleString('ro-RO')}</div><div class="munit">kWh termici/an</div></div>`);
+    metricsHtml.push(`<div class="metric orange"><div class="mlabel">Cost anual (pompă)</div><div class="mvalue">${result.annualCostRON.toLocaleString('ro-RO')}</div><div class="munit">RON/an</div></div>`);
+    metricsHtml.push(`<div class="metric green"><div class="mlabel">Economii vs. gaz</div><div class="mvalue">${result.annualSavingRON.toLocaleString('ro-RO')}</div><div class="munit">RON/an</div></div>`);
+    metricsHtml.push(`<div class="metric green"><div class="mlabel">CO₂ evitat</div><div class="mvalue">${result.co2SavedKg.toLocaleString('ro-RO')}</div><div class="munit">kg/an</div></div>`);
+  } else {
+    metricsHtml.push(`<div class="metric"><div class="mlabel">Putere răcire</div><div class="mvalue">${result.coolingKW.toFixed(1)}</div><div class="munit">kW frigorifici</div></div>`);
+    metricsHtml.push(`<div class="metric"><div class="mlabel">Suprafață utilă</div><div class="mvalue">${state.area}</div><div class="munit">m²</div></div>`);
+  }
+  document.getElementById('metricsGrid').innerHTML = metricsHtml.join('');
+
+  // Tabs
+  const tabsConfig = [
+    { id: 'main', label: '🏠 Sistem principal', items: recs.main },
+    { id: 'indoor', label: '📦 Unități interne', items: recs.indoor },
+    { id: 'distribution', label: '💨 Distribuție', items: recs.distribution },
+    { id: 'splits', label: '❄️ Splituri AC', items: recs.splits },
+    { id: 'dhw', label: '💧 Apă caldă', items: recs.dhw },
+    { id: 'ventilation', label: '🌬️ Ventilație HRV', items: recs.ventilation },
+    { id: 'storage', label: '🔋 Stocare PV', items: recs.storage },
+    { id: 'chillers', label: '🏭 Chillere XL', items: recs.chillers },
+    { id: 'controls', label: '🎛️ Comandă', items: recs.controls }
+  ].filter(t => t.items && t.items.length > 0);
+
+  document.getElementById('tabs').innerHTML = tabsConfig.map((t, i) =>
+    `<button class="tab ${i === 0 ? 'active' : ''}" data-tab="${t.id}">${t.label} <span class="count">${t.items.length}</span></button>`
+  ).join('');
+
+  document.getElementById('tabContents').innerHTML = tabsConfig.map((t, i) =>
+    `<div class="tab-content ${i === 0 ? 'active' : ''}" data-tab-content="${t.id}">${renderProductGrid(t.items)}</div>`
+  ).join('');
+
+  // Tab handlers
+  document.querySelectorAll('.tab').forEach(tb => {
+    tb.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      tb.classList.add('active');
+      document.querySelector(`[data-tab-content="${tb.dataset.tab}"]`).classList.add('active');
+    });
+  });
+
+  // Show results
+  const results = document.getElementById('results');
+  results.classList.add('show');
+  results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// =============================================================================
+// INIT
+// =============================================================================
+renderForm();
+setupToggles();
+updateLive();
+document.getElementById('seeResultsBtn').addEventListener('click', renderResults);
+
+</script>
+
+</body>
+</html>
