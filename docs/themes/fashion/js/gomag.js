@@ -1298,7 +1298,7 @@
 
 				$.Gomag.setRuleCountdown(data);
 
-				$.each(data.envData.products, function(i, v) {
+				$.each((data && data.envData && data.envData.products) || {}, function(i, v) {
 					if($($.Gomag.config.detailsBasePriceWithVat + i).length == 0 && v.basePriceWithVatCurrency != undefined) {
 						$($.Gomag.config.listingBasePriceWithVat + i).html(v.basePriceWithVatCurrency);
 					}

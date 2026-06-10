@@ -41,7 +41,7 @@ $.Gomag.bind('Order/Summary/Complete', function orderSummaryCompleteLibrary(resp
 	{
 		$('.form-cpn').css('display', 'block');
 	}
-	if(data.cartVoucherError !== false)
+	if(data && data.cartVoucherError && data.cartVoucherError !== false)
 	{
 		var html = '';
 		$.each(data.cartVoucherError, function(i, v){
