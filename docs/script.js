@@ -1,0 +1,5 @@
+
+function carmove(b,d){var c=b.parentElement.querySelector('.car');c.scrollBy({left:d*c.clientWidth*0.8,behavior:'smooth'});}
+function tab(e,i){var p=e.closest('.ptabs');p.querySelectorAll('.tabs span').forEach(function(s,j){s.classList.toggle('on',j==i)});p.querySelectorAll('.tabc').forEach(function(c,j){c.classList.toggle('on',j==i)});}
+function vch(s){var o=s.options[s.selectedIndex];document.getElementById('pp').innerHTML='<b>'+o.dataset.pret+' Lei</b>';var b=document.getElementById('buy');if(b)b.href='mailto:office@rixar.ro?subject='+encodeURIComponent('Cerere oferta: '+document.title+' — varianta '+o.text+' ('+o.dataset.sku+')');}
+function sols(f){var b='';f.querySelectorAll('input,select,textarea').forEach(function(i){if(i.type=='checkbox'){if(i.checked&&i.name)b+=i.name+': DA\n';}else if(i.value&&i.name)b+=i.name+': '+i.value+'\n';});location.href='mailto:office@rixar.ro?subject='+encodeURIComponent('Solicitare echipamente Clivet (site)')+'&body='+encodeURIComponent(b);return false;}
