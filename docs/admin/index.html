@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="ro"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin produse | RIXAIR</title>
+<link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Signika',sans-serif;background:#f5f7f9;color:#333;padding:30px}
+.wrap{max-width:1080px;margin:0 auto}h1{font-size:24px;margin-bottom:4px}.sub{color:#5a6a78;font-size:14px;margin-bottom:22px}
+.card{background:#fff;border:1px solid #e7e7e7;border-radius:14px;padding:18px;margin-bottom:14px}
+label{font-size:13px;font-weight:600;display:block;margin:10px 0 4px}
+input,select{font-family:inherit;font-size:14px;padding:8px 12px;border:1px solid #ddd;border-radius:10px;width:100%}
+button{font-family:inherit;font-size:14px;font-weight:700;padding:11px 22px;border:none;border-radius:22px;cursor:pointer}
+.b1{background:#1583ab;color:#fff}.b2{background:#f4c340;color:#fff}.b1:disabled{opacity:.5}
+table{width:100%;border-collapse:collapse;font-size:13.5px}td,th{padding:7px 9px;border-bottom:1px solid #f0f0f0;text-align:left}
+th{background:#f5fafd;font-size:12px}td input{padding:5px 9px;border-radius:8px}
+.pname{font-weight:700;font-size:15px}.tag{font-size:11px;color:#888}
+.stoc-ascuns{background:#fff3f3}.stoc-la_comanda{background:#fff9e8}
+#status{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#2e7d32;color:#fff;padding:11px 24px;border-radius:26px;display:none;z-index:9}
+.vrow td:first-child{padding-left:26px;color:#555}
+</style></head><body><div class="wrap">
+<h1>Admin produse RIXAIR</h1>
+<div class="sub">Modifici prețuri/stoc → „Salvează în site" → GitHub aplică automat pe toate paginile (~1 min).</div>
+<div class="card" id="loginCard">
+  <label>Token GitHub (fine-grained, cu drept „Contents: Read & Write" doar pe repo-ul site-ului)</label>
+  <input id="tok" type="password" placeholder="github_pat_...">
+  <label>Repo (utilizator/nume)</label>
+  <input id="repo" placeholder="ex: rixair/rixair-site">
+  <div style="margin-top:14px"><button class="b1" onclick="login()">Conectează-te</button></div>
+</div>
+<div id="app" style="display:none">
+  <div class="card" style="display:flex;gap:12px;align-items:center;justify-content:space-between">
+    <span id="who" class="tag"></span>
+    <span><button class="b2" onclick="loadData()">Reîncarcă</button> <button class="b1" id="saveBtn" onclick="saveData()">Salvează în site</button></span>
+  </div>
+  <div id="list"></div>
+</div>
+</div><div id="status"></div>
+<script>
+let SHA=null, DATA=null;
+const $=id=>document.getElementById(id);
+const cfg=()=>({tok:localStorage.rx_tok, repo:localStorage.rx_repo});
+function toast(m,ok=true){const s=$('status');s.textContent=m;s.style.background=ok?'#2e7d32':'#c62828';s.style.display='block';setTimeout(()=>s.style.display='none',3500);}
+function login(){localStorage.rx_tok=$('tok').value.trim();localStorage.rx_repo=$('repo').value.trim();init();}
+async function gh(path,opt={}){const c=cfg();const r=await fetch('https://api.github.com/repos/'+c.repo+path,{...opt,headers:{'Authorization':'Bearer '+c.tok,'Accept':'application/vnd.github+json',...(opt.headers||{})}});if(!r.ok)throw new Error(r.status+' '+(await r.text()).slice(0,120));return r.json();}
+async function init(){const c=cfg();if(!c.tok||!c.repo)return;$('loginCard').style.display='none';$('app').style.display='block';$('who').textContent=c.repo;try{await loadData();}catch(e){toast('Eroare: '+e.message,false);$('loginCard').style.display='block';}}
+async function loadData(){const j=await gh('/contents/data/produse.json');SHA=j.sha;DATA=JSON.parse(decodeURIComponent(escape(atob(j.content.replace(/\n/g,'')))));render();toast('Date încărcate');}
+function render(){
+ $('list').innerHTML=DATA.map((p,i)=>{
+  const st=p.stoc||'in_stoc';
+  const vrows=(p.variante||[]).map((v,j)=>`<tr class="vrow"><td>${v.nume}</td><td style="width:130px"><input type="number" step="0.01" value="${v.pret}" onchange="DATA[${i}].variante[${j}].pret=parseFloat(this.value)"></td><td class="tag">${v.sku}</td></tr>`).join('');
+  const dela=(!p.variante||!p.variante.length)?`<tr class="vrow"><td>Preț „de la" (gol = la cerere)</td><td style="width:130px"><input type="number" step="0.01" value="${p.pret_de_la??''}" onchange="DATA[${i}].pret_de_la=this.value?parseFloat(this.value):null"></td><td></td></tr>`:'';
+  return `<div class="card stoc-${st}" id="pc${i}">
+   <table><tr><th style="width:55%"><span class="pname">${p.nume}</span><br><span class="tag">${p.sku}</span></th>
+   <th style="width:180px">Stoc<br><select onchange="DATA[${i}].stoc=this.value;document.getElementById('pc${i}').className='card stoc-'+this.value">
+    <option value="in_stoc"${st=='in_stoc'?' selected':''}>În stoc</option>
+    <option value="la_comanda"${st=='la_comanda'?' selected':''}>La comandă</option>
+    <option value="ascuns"${st=='ascuns'?' selected':''}>Ascuns de pe site</option></select></th><th></th></tr>
+   ${vrows}${dela}</table></div>`;
+ }).join('');
+}
+async function saveData(){
+ $('saveBtn').disabled=true;
+ try{
+  const body=btoa(unescape(encodeURIComponent(JSON.stringify(DATA,null,1))));
+  const j=await gh('/contents/data/produse.json',{method:'PUT',body:JSON.stringify({message:'admin: actualizare produse',content:body,sha:SHA})});
+  SHA=j.content.sha;toast('Salvat! Site-ul se actualizează automat în ~1 minut.');
+ }catch(e){toast('Eroare la salvare: '+e.message,false);}
+ $('saveBtn').disabled=false;
+}
+init();
+</script></body></html>
