@@ -1,0 +1,18 @@
+
+.rx-note{display:inline-block;background:#f5fafd;border:1px solid #cfe0f0;border-radius:10px;padding:9px 14px;font-size:13.5px;color:#1583ab;margin:6px 0}
+.rx-toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);background:#2e7d32;color:#fff;padding:13px 22px;border-radius:30px;font-size:14.5px;z-index:99999;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.rx-toast a{color:#fff;text-decoration:underline;font-weight:700}
+.rx-sug{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #e7e7e7;border-radius:12px;box-shadow:0 10px 26px rgba(0,0,0,.14);z-index:99998;overflow:hidden}
+.rx-sug a{display:flex;gap:10px;align-items:center;padding:9px 13px;font-size:13.5px;border-bottom:1px solid #f5f5f5;color:#333;text-decoration:none}
+.rx-sug a:hover{background:#f5fafd}.rx-sug img{width:36px;height:36px;object-fit:contain}
+.rx-hide,body.rx-cos .cart-box,body.rx-cos .-g-checkout-summary,body.rx-cos .cart-amount,body.rx-cos .cart-title-holder{display:none!important}
+table.rx-t{width:100%;border-collapse:collapse;font-size:14.5px;margin:14px 0;font-family:inherit}
+table.rx-t th{background:#f5fafd;text-align:left;padding:11px;border-bottom:2px solid #d7e3ee}
+table.rx-t td{padding:11px;border-bottom:1px solid #f0f0f0;vertical-align:middle}
+table.rx-t img{width:54px;height:54px;object-fit:contain}
+.rx-b{background:#1583ab;color:#fff;border:none;border-radius:24px;padding:12px 26px;font-weight:700;font-size:14px;cursor:pointer;margin-right:10px}
+.rx-b.o{background:#fff;color:#1583ab;border:2px solid #1583ab}
+.rx-x{background:none;border:none;color:#e2574c;font-size:17px;cursor:pointer}
+.rx-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:18px 0}
+.rx-grid a{border:1px solid #eee;border-radius:14px;padding:12px;text-align:center;color:#333;text-decoration:none;background:#fff}
+.rx-grid img{max-height:150px;object-fit:contain}
