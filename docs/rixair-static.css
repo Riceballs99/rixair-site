@@ -47,3 +47,6 @@ table.rx-t img{width:54px;height:54px;object-fit:contain}
 ._descriptionTab table{margin:10px 0 18px;border-collapse:collapse}
 ._descriptionTab table td{padding:8px 12px;border-bottom:1px solid #eee}
 ._descriptionTab hr{margin:16px 0;border:none;border-top:1px solid #e8e8e8}
+
+/* rx-gap-css */ #wrapper>*:has(+ .footer-holder){margin-bottom:0!important;overflow:hidden}
+.gomagComponent:last-of-type{margin-bottom:0!important}
