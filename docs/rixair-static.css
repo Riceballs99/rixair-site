@@ -36,3 +36,14 @@ table.rx-t img{width:54px;height:54px;object-fit:contain}
 @media(max-width:700px){.rx-calc iframe{height:1500px}}
 
 /* rx-no-gap */ .-g-component-id-4349{margin-bottom:0!important}
+
+/* rx-desc-style */
+._descriptionTab{padding:10px 4px}
+._descriptionTab h2{font-size:22px;margin:4px 0 10px}
+._descriptionTab h3{font-size:17px;margin:18px 0 8px}
+._descriptionTab p{margin:8px 0;line-height:1.6}
+._descriptionTab ul{margin:8px 0 14px 24px}
+._descriptionTab li{margin:4px 0}
+._descriptionTab table{margin:10px 0 18px;border-collapse:collapse}
+._descriptionTab table td{padding:8px 12px;border-bottom:1px solid #eee}
+._descriptionTab hr{margin:16px 0;border:none;border-top:1px solid #e8e8e8}

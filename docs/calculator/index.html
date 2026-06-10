@@ -785,7 +785,7 @@ body{padding:18px 0 0 0!important}
 .hero h1{color:#333!important}
 .hero h1 span{color:#1583ab!important}
 .hero p, .hero .sub{color:#5a6a78!important}
-.hero-badge{background:#f0f7fb!important;color:#1583ab!important;border:1px solid #cfe0f0!important}
+.hero-badge{background:none!important;color:#1583ab!important;border:none!important;font-size:22px!important;font-weight:600!important;padding:0!important;letter-spacing:.3px!important}
 .hero [class*=stat]{color:#333!important}
 .hero [class*=stat] *{color:inherit}
 .res-headline{background:#ffffff!important;border:1px solid #ececec!important;color:#333!important}
@@ -805,7 +805,7 @@ body{padding:18px 0 0 0!important}
 
   <!-- HERO -->
   <div class="hero">
-    <div class="hero-badge">⚡ Calculator HVAC Avansat</div>
+    <div class="hero-badge">Calculator HVAC avansat</div>
     <h1>Află în 60 de secunde sistemul <span>HVAC Clivet</span> potrivit pentru locuința sau afacerea ta</h1>
     <p>Calculator complet pentru dimensionarea pompelor de căldură, ventiloconvectoarelor, recuperatoarelor de căldură, sistemelor de apă caldă menajeră și stocării energiei — cu recomandări din întreaga gamă Clivet pe care RIXAIR o distribuie în România.</p>
     <div class="hero-stats">
@@ -1539,5 +1539,7 @@ document.getElementById('seeResultsBtn').addEventListener('click', renderResults
 
 </script>
 
-</body>
+<script id="rx-noscroll">
+if(window.self!==window.top){var _siv=Element.prototype.scrollIntoView;Element.prototype.scrollIntoView=function(){};}
+</script></body>
 </html>

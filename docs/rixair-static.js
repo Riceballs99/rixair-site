@@ -117,8 +117,11 @@ f.addEventListener('load',function(){sz();setInterval(sz,600);});setTimeout(sz,1
 
 /* rxGapKiller: elimina marginea alba dinaintea footerului pe orice pagina */
 document.addEventListener('DOMContentLoaded',function(){
- var fh=document.querySelector('.footer-holder');if(!fh)return;
- var p=fh.previousElementSibling;
+ var foot=document.querySelector('.footer-holder');
+ if(!foot){var mf=document.querySelector('.main-footer');if(mf){foot=mf;
+  while(foot.parentElement&&foot.parentElement.id!=='wrapper'&&foot.parentElement!==document.body)foot=foot.parentElement;}}
+ if(!foot)return;
+ var p=foot.previousElementSibling;
  while(p&&p.offsetHeight===0)p=p.previousElementSibling;
- if(p){p.style.marginBottom='0px';}
+ if(p){p.style.marginBottom='0px';p.style.overflow='hidden';}
 });
