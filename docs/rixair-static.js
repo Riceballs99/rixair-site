@@ -112,5 +112,5 @@ setInterval(function(){go(1)},6000);})();
 
 /* rxCalcSize: iframe calculator fara scroll intern */
 (function(){var f=document.getElementById('rxCalcF');if(!f)return;
-function sz(){try{var d=f.contentDocument;if(d&&d.body){var h=Math.max(d.body.scrollHeight,d.documentElement.scrollHeight);if(h>200)f.style.height=(h+30)+'px';}}catch(e){}}
+function sz(){try{var d=f.contentDocument;if(d&&d.body){var h=d.body.scrollHeight;if(h>200)f.style.height=h+'px';}}catch(e){}}
 f.addEventListener('load',function(){sz();setInterval(sz,600);});setTimeout(sz,1500);})();
