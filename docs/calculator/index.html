@@ -768,21 +768,37 @@
 </style>
 
 <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;600;700&display=swap" rel="stylesheet">
-<style id="rx-theme-override">
+
+<style id="rx-flat-results">.results{background:#ffffff!important;box-shadow:none!important;border:none!important;border-radius:0!important;margin:0!important}.results .res-headline{border-radius:14px}</style><style id="rx-theme-override">
 :root{
- --orange:#f4c340; --orange-dark:#e8b52e; --orange-soft:#fdf6e3;
+ --orange:#1583ab; --orange-dark:#0d7193; --orange-soft:#e8f4fa;
  --navy:#1583ab; --navy-dark:#0d7193; --navy-soft:#f0f7fb;
  --blue:#1593d2; --blue-soft:#e8f4fa;
  --gray-900:#333333; --gray-700:#3a4a58; --gray-600:#5a6a78;
 }
 body, body *{font-family:'Signika',sans-serif!important}
-body{background:#ffffff!important}
-
 html,body{background:#ffffff!important;min-height:0!important;height:auto!important}
 body{padding:18px 0 0 0!important}
 .app{box-shadow:none!important;border-radius:0!important}
-</style>
-<style id="rx-flat-results">.results{background:#ffffff!important;box-shadow:none!important;border:none!important;border-radius:0!important;margin:0!important}.results .res-headline{border-radius:14px}</style></head>
+/* totul alb, in stilul site-ului */
+.hero{background:#ffffff!important;color:#333!important;text-align:center;border-bottom:1px solid #ececec}
+.hero h1{color:#333!important}
+.hero h1 span{color:#1583ab!important}
+.hero p, .hero .sub{color:#5a6a78!important}
+.hero-badge{background:#f0f7fb!important;color:#1583ab!important;border:1px solid #cfe0f0!important}
+.hero [class*=stat]{color:#333!important}
+.hero [class*=stat] *{color:inherit}
+.res-headline{background:#ffffff!important;border:1px solid #ececec!important;color:#333!important}
+.res-headline::before{display:none!important}
+.res-headline .label{color:#5a6a78!important;opacity:1!important}
+.kw{color:#1583ab!important}
+.live-result{background:#ffffff!important;border:1px solid #e3e3e3!important;color:#333!important;box-shadow:0 4px 14px rgba(0,0,0,.08)!important}
+.live-result .lr-label{color:#5a6a78!important;opacity:1!important}
+.live-result .lr-value{color:#1583ab!important}
+.live-result .lr-btn{background:#f4c340!important;color:#fff!important}
+.live-result .lr-btn:hover{background:#e8b52e!important}
+.results{background:#ffffff!important;box-shadow:none!important;border:none!important;border-radius:0!important;margin:0!important}
+</style></head>
 <body>
 
 <div class="app">

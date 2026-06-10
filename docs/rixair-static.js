@@ -114,3 +114,11 @@ setInterval(function(){go(1)},6000);})();
 (function(){var f=document.getElementById('rxCalcF');if(!f)return;
 function sz(){try{var d=f.contentDocument;if(d&&d.body){var h=d.body.scrollHeight;if(h>200)f.style.height=h+'px';}}catch(e){}}
 f.addEventListener('load',function(){sz();setInterval(sz,600);});setTimeout(sz,1500);})();
+
+/* rxGapKiller: elimina marginea alba dinaintea footerului pe orice pagina */
+document.addEventListener('DOMContentLoaded',function(){
+ var fh=document.querySelector('.footer-holder');if(!fh)return;
+ var p=fh.previousElementSibling;
+ while(p&&p.offsetHeight===0)p=p.previousElementSibling;
+ if(p){p.style.marginBottom='0px';}
+});
