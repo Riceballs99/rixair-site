@@ -52,5 +52,5 @@ table.rx-t img{width:54px;height:54px;object-fit:contain}
 .gomagComponent:last-of-type{margin-bottom:0!important}
 
 /* rx-logo-big */
-.logo-h img, header .logo img, .main-header .logo-h img{height:90px!important;max-height:90px!important;width:auto!important}
+.logo-h img, header .logo img, .main-header .logo-h img{height:120px!important;max-height:120px!important;width:auto!important}
 @media(max-width:760px){.logo-h img{height:64px!important;max-height:64px!important}}
