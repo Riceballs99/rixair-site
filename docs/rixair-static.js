@@ -97,3 +97,15 @@ document.addEventListener('DOMContentLoaded',function(){
  var h2=document.getElementById('rxCautaHost');if(h2)renderCauta(h2);
 });
 })();
+
+/* rxLazyFix: incarca imaginile lazy daca lazysizes nu a pornit */
+setTimeout(function(){document.querySelectorAll('img[data-src]').forEach(function(i){
+ if(!i.getAttribute('src')||i.naturalWidth===0){var d=i.getAttribute('data-src');if(d)i.setAttribute('src',d);}
+ var ds=i.getAttribute('data-srcset');if(ds)i.setAttribute('srcset',ds);});},800);
+
+/* rxHero */
+(function(){var w=document.querySelector('.rx-hero');if(!w)return;var im=[...w.querySelectorAll('img')],x=0;
+function go(d){im[x].style.display='none';x=(x+d+im.length)%im.length;im[x].style.display='block';}
+w.querySelector('.rx-ha.l').addEventListener('click',function(){go(-1)});
+w.querySelector('.rx-ha.r').addEventListener('click',function(){go(1)});
+setInterval(function(){go(1)},6000);})();

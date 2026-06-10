@@ -16,3 +16,10 @@ table.rx-t img{width:54px;height:54px;object-fit:contain}
 .rx-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:18px 0}
 .rx-grid a{border:1px solid #eee;border-radius:14px;padding:12px;text-align:center;color:#333;text-decoration:none;background:#fff}
 .rx-grid img{max-height:150px;object-fit:contain}
+
+.price{display:block!important;visibility:visible!important;opacity:1!important}
+
+.rx-hero{position:relative;width:100%;max-height:560px;overflow:hidden;background:#0d2d4e}
+.rx-hero img{width:100%;display:block;max-height:560px;object-fit:cover}
+.rx-ha{position:absolute;top:46%;width:46px;height:46px;border-radius:50%;background:rgba(120,120,120,.55);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;cursor:pointer;z-index:5}
+.rx-ha.l{left:18px}.rx-ha.r{right:18px}
