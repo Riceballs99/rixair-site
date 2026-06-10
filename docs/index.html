@@ -554,173 +554,7 @@ gmsc('shop_utm_source', gmup.get('utm_source'));
 
 
 		
-	<div class="-g-component-id-hero-banner bnn-group-left gomagComponent container-bg -g-homepage-main-slider " data-gomag-component="">
-
-		<div id="main-bnn">
-
-			<div class="bnn-group bnn-group-big" id="sync1">
-
-				
-				
-										
-						<div class="
-						-g-banner-slider-item-video _sliderElement banner_video banner_desktop hideSlide" id="banner_1">
-							<div class="video_h">
-																	<iframe width="560" height="315" src="https://www.youtube.com/embed/irGyQU59Jx8?autoplay=1&amp;loop=1&amp;playlist=irGyQU59Jx8&amp;mute=1&amp;controls=0" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
-															</div>
-							<a class="-g-banner-slider-item-video-image-holder slideHeight -g-no-url" href="#" title="CLIVET - Sisteme pentru fiecare tip de utilizare și condiții climatice" target="_self"  style="height:450px">
-															</a>
-						</div>
-
-																	</div>
-
-						
-		</div>
-
-							<script >
-				$(document).ready(function () {
-
-										function setVideoHeight() {
-
-						var prefix = '#sync1';
-
-						if ($(prefix+' .-g-banner-slider-item-video').length && $(prefix+' .-g-banner-slider-item-image').length)
-						{
-							var getHeight = $(prefix+' .-g-banner-slider-item-image:first img').height();
-
-							var videoSlide = $(prefix+' .-g-banner-slider-item-video .-g-banner-slider-item-video-image-holder');
-							videoSlide.css('height', 'auto');
-							videoSlide.css('height', getHeight + 'px');
-
-							if ($(prefix+' .-g-banner-slider-item-video .-g-banner-slider-item-video-image-holder img').length)
-							{
-								$(this).css('max-height', getHeight + 'px');
-							}
-						}
-					}
-
-										function navStatus() {
-
-						var prefix = '#sync1';
-
-						if ($(prefix+' .owl-item.loading').length){
-							if ($(prefix+' .owl-item:first-child').hasClass('active')){
-								$(prefix+' .owl-prev').addClass('disable');
-							}else{
-								$(prefix+' .owl-prev').removeClass('disable');
-							}
-						} else {
-							$(prefix+' .owl-prev').removeClass('disable');
-						}
-					}
-
-										var resizeTimer;
-					$(window).on('resize', function(e) {
-						clearTimeout(resizeTimer);
-						resizeTimer = setTimeout(function() {
-							var prefix = '#sync1';
-							if ($(prefix+' .-g-banner-slider-item-video').length && $(prefix+' .-g-banner-slider-item-image').length){
-								setVideoHeight();
-							};
-						}, 250);
-					});
-
-										var sync1 = $("#sync1");
-					var sync2 = $("#sync2");
-					var bannersItems = {
-						mobile: 0,
-						desktop: 0
-					};
-
-																								bannersItems.desktop += 1;
-																	
-					var bannersItemsCount = screen.width >= 760 ? bannersItems.desktop : bannersItems.mobile;
-
-					sync1.owlCarousel({
-						singleItem : true,
-						slideSpeed : 1000,
-						lazyLoad : true,
-						addClassActive : true,
-												autoPlay: 8000,
-						navigation: true,
-						pagination: true,
-													afterAction : syncPosition,
-												stopOnHover: true,
-						responsiveRefreshRate : 200,
-						afterInit : function(){
-							setVideoHeight();
-							navStatus();
-						},
-						afterMove : function(){
-							navStatus();
-						}
-					});
-
-											sync2.owlCarousel({
-							items : bannersItemsCount,
-							itemsDesktop: [1199, Math.min(bannersItemsCount, 4)],
-							itemsDesktopSmall: [979,  Math.min(bannersItemsCount, 3)],
-							itemsTablet: [768, 2],
-							itemsMobile: [479, 1],
-							pagination:false,
-							responsiveRefreshRate : 100,
-							stopOnHover: true,
-							afterInit : function(el){
-							  el.find(".owl-item").eq(0).addClass("synced");
-							}
-						});
-
-						function syncPosition(el){
-							var current = this.currentItem;
-							var key = '#sync2';
-							$(key)
-							  .find(".owl-item")
-							  .removeClass("synced")
-							  .eq(current)
-							  .addClass("synced");
-
-							if($(key).data("owlCarousel") !== undefined){
-							  center(current)
-							}
-						}
-
-						$("#sync2").on("click", ".owl-item", function(e){
-							e.preventDefault();
-							var number = $(this).data("owlItem");
-							sync1.trigger("owl.goTo",number);
-						});
-
-						function center(number){
-							var sync2visible = sync2.data("owlCarousel").owl.visibleItems;
-							var num = number;
-							var found = false;
-							for(var i in sync2visible){
-							  if(num === sync2visible[i]){
-								var found = true;
-							  }
-							}
-
-							if(found===false){
-							  if(num>sync2visible[sync2visible.length-1]){
-								sync2.trigger("owl.goTo", num - sync2visible.length+2)
-							  }else{
-								if(num - 1 === -1){
-								  num = 0;
-								}
-								sync2.trigger("owl.goTo", num);
-							  }
-							} else if(num === sync2visible[sync2visible.length-1]){
-							  sync2.trigger("owl.goTo", sync2visible[1])
-							} else if(num === sync2visible[0]){
-							  sync2.trigger("owl.goTo", num-1)
-							}
-						};
-					
-				});
-
-			</script>
-		
-	</div>
+	
 
 
 
@@ -759,16 +593,8 @@ gmsc('shop_utm_source', gmup.get('utm_source'));
 						<hr>
 					</div>
 								<div class="carousel slide-item-component slide-item-4" id="slide-item-0621">
-													<div class="product-box-h ">
-			
-
-
-				</div>
-						<div class="product-box-h ">
-			
-
-
-				</div>
+													
+						
 						<div class="product-box-h ">
 			
 
@@ -1062,11 +888,8 @@ gmsc('shop_utm_source', gmup.get('utm_source'));
 									<div class="-g-listing-attributes __GomagListingAttributes -g-listing-attributes-193">
 																								</div>
 																									<div class="price -g-list-price-193" data-block="ListingPrice">
-																									<s class="price-full -g-product-box-full-price-193">
-																			</s>
-																		<span class="text-main -g-product-box-final-price-193">
-																																	de la 15.865,00 Lei
-																														</span>
+																									<s class="price-full -g-product-box-full-price-193"></s>
+																		<span class="text-main -g-product-box-final-price-193">de la 13.786,24 Lei</span>
 
 									
 									
