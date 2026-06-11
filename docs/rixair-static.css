@@ -98,3 +98,16 @@ body.rx-cos .main-header img{max-height:72px;width:auto;}
 body.rx-cos #shoppingcart{min-height:62vh;padding-top:8px;}
 body.rx-cos .rx-t{margin-top:6px;}
 body.rx-cos .cart-header{margin-left:0!important;padding-left:28px;}
+
+/* rx-cos-aerisit: cosul mai generos */
+body.rx-cos #shoppingcart h1{font-size:30px!important;margin:26px 0 22px!important}
+body.rx-cos table.rx-t{font-size:15.5px;margin:18px 0 26px}
+body.rx-cos table.rx-t th{padding:16px 18px;font-size:13px;text-transform:uppercase;letter-spacing:.4px;color:#456}
+body.rx-cos table.rx-t td{padding:22px 18px;border-bottom:1px solid #e9eef3}
+body.rx-cos table.rx-t img{width:92px;height:92px;border:1px solid #eef2f6;border-radius:10px;padding:6px;background:#fff}
+body.rx-cos table.rx-t td:nth-child(2){font-weight:600;font-size:16px;line-height:1.45;max-width:480px}
+body.rx-cos table.rx-t small{color:#789;font-size:12.5px}
+body.rx-cos .rx-x{font-size:19px;padding:6px 9px}
+body.rx-cos .rx-b{padding:15px 34px;font-size:15px;margin-top:8px}
+body.rx-cos #shoppingcart{max-width:1150px;margin:0 auto;padding-top:14px}
+body.rx-cos #shoppingcart p{font-size:15px}
