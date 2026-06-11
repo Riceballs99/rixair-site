@@ -77,7 +77,7 @@ function renderCerere(host){
  var pb=host.querySelector('#rxPay');if(pb)pb.addEventListener('click',function(){
   pb.disabled=true;pb.textContent='Se deschide plata...';
   var items=qget().map(function(i){return {sku:i.sku, qty:i.qty};});
-  fetch(RX_CHECKOUT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({items:items})})
+  fetch(RX_CHECKOUT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({items:items, email: localStorage.getItem('rx_email')||undefined})})
    .then(function(r){return r.json();})
    .then(function(d){if(d.url){location.href=d.url;}else{throw new Error(d.error||'eroare');}})
    .catch(function(e){pb.disabled=false;pb.textContent='\uD83D\uDCB3 Pl\u0103te\u0219te cu cardul';alert('Plata nu a putut porni: '+e.message+'\nPo\u021Bi trimite cererea pe email.');});

@@ -28,12 +28,49 @@ th{background:#f5fafd;font-size:12px}td input{padding:5px 9px;border-radius:8px}
 <div id="app" style="display:none">
   <div class="card" style="display:flex;gap:12px;align-items:center;justify-content:space-between">
     <span id="who" class="tag"></span>
-    <span><button class="b2" onclick="loadData()">Reîncarcă</button> <button class="b1" id="saveBtn" onclick="saveData()">Salvează în site</button></span>
+    <span><button class="b2" onclick="arataComenzi()">📦 Comenzi</button> <button class="b2" onclick="loadData()">Reîncarcă</button> <button class="b1" id="saveBtn" onclick="saveData()">Salvează în site</button></span>
+  </div>
+  <div class="card" id="comenziCard" style="display:none">
+    <h2 style="font-size:18px;margin-bottom:10px">Comenzi plătite</h2>
+    <div id="comenziLogin">
+      <p style="font-size:13.5px;color:#5a6a78;margin-bottom:8px">Intră cu contul de admin (emailul tău) ca să vezi comenzile.</p>
+      <input id="aem" type="email" placeholder="email admin" style="max-width:260px"> 
+      <input id="apw" type="password" placeholder="parolă" style="max-width:200px">
+      <button class="b1" onclick="comenziLogin()" style="padding:8px 18px">Intră</button>
+      <span id="cmsg" style="font-size:13px;color:#c62828;margin-left:8px"></span>
+    </div>
+    <div id="comenziList" style="display:none"></div>
   </div>
   <div id="list"></div>
 </div>
 </div><div id="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script>
+var SB = window.supabase.createClient('https://uyynocwfvwmgttckgvzu.supabase.co','sb_publishable_psRLYjPPsD3pkDfpLpZfAw_ubdHcm-P');
+async function arataComenzi(){
+ document.getElementById('comenziCard').style.display='';
+ var s=(await SB.auth.getSession()).data.session;
+ if(s) incarcaComenzi();
+}
+async function comenziLogin(){
+ var r=await SB.auth.signInWithPassword({email:document.getElementById('aem').value.trim(),password:document.getElementById('apw').value});
+ document.getElementById('cmsg').textContent = r.error ? 'eroare: email sau parolă greșite' : '';
+ if(!r.error) incarcaComenzi();
+}
+async function incarcaComenzi(){
+ document.getElementById('comenziLogin').style.display='none';
+ var host=document.getElementById('comenziList'); host.style.display=''; host.textContent='Se încarcă...';
+ var r=await SB.from('comenzi').select('numar,created_at,email,nume,telefon,produse,total,status').order('created_at',{ascending:false});
+ if(r.error){host.textContent='Eroare la încărcare (ești admin?): '+r.error.message;return;}
+ if(!r.data.length){host.textContent='Nicio comandă încă.';return;}
+ var t='<table><tr><th>Nr</th><th>Data</th><th>Client</th><th>Produse</th><th style="text-align:right">Total</th><th>Status</th></tr>';
+ r.data.forEach(function(c){
+  var prods=(c.produse||[]).map(function(p){return (p.cantitate>1?p.cantitate+' × ':'')+(p.descriere||'');}).join('<br>');
+  var client=(c.nume?c.nume+'<br>':'')+'<span class="tag">'+c.email+'</span>'+(c.telefon?'<br>'+c.telefon:'');
+  t+='<tr><td><b>#'+c.numar+'</b></td><td>'+new Date(c.created_at).toLocaleString('ro-RO')+'</td><td>'+client+'</td><td>'+prods+'</td><td style="text-align:right"><b>'+new Intl.NumberFormat('ro-RO',{minimumFractionDigits:2}).format(c.total)+' Lei</b></td><td>'+c.status+'</td></tr>';
+ });
+ host.innerHTML=t+'</table>';
+}
 let SHA=null, DATA=null;
 const $=id=>document.getElementById(id);
 const cfg=()=>({tok:localStorage.rx_tok, repo:localStorage.rx_repo});

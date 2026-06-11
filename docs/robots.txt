@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /cont/
 Sitemap: https://rixair.ro/sitemap.xml
