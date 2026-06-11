@@ -408,7 +408,7 @@
  {
   "nr": 8,
   "slug": "pompa-de-caldura-hydro-split-tower-cu-dhw-190-250l-2-1-8-1",
-  "nume": "Pompă de căldură HYDRO-Split TOWER cu DHW 190–250L 2.1–8.1",
+  "nume": "Pompă de căldură HYDRO-Split TOWER cu DHW 190L 2.1–8.1",
   "sku": "HydroT+EXC-190L",
   "categorie": "pompe",
   "pret_tip": "de_la",
@@ -425,16 +425,6 @@
     "sku": "HydroT+EXC-190L-trifazic-2.1"
    },
    {
-    "nume": "TOWER 2.1 — DHW 250L (monofazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-250L-monofazic-2.1"
-   },
-   {
-    "nume": "TOWER 2.1 — DHW 250L (trifazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-250L-trifazic-2.1"
-   },
-   {
     "nume": "TOWER 3.1 — DHW 190L (monofazic)",
     "pret": null,
     "sku": "HydroT+EXC-190L-monofazic-3.1"
@@ -443,16 +433,6 @@
     "nume": "TOWER 3.1 — DHW 190L (trifazic)",
     "pret": null,
     "sku": "HydroT+EXC-190L-trifazic-3.1"
-   },
-   {
-    "nume": "TOWER 3.1 — DHW 250L (monofazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-250L-monofazic-3.1"
-   },
-   {
-    "nume": "TOWER 3.1 — DHW 250L (trifazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-250L-trifazic-3.1"
    },
    {
     "nume": "TOWER 4.1 — DHW 190L (monofazic)",
@@ -465,16 +445,6 @@
     "sku": "HydroT+EXC-190L-trifazic-4.1"
    },
    {
-    "nume": "TOWER 4.1 — DHW 250L (monofazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-250L-monofazic-4.1"
-   },
-   {
-    "nume": "TOWER 4.1 — DHW 250L (trifazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-250L-trifazic-4.1"
-   },
-   {
     "nume": "TOWER 5.1 — DHW 190L (monofazic)",
     "pret": null,
     "sku": "HydroT+EXC-190L-monofazic-5.1"
@@ -483,16 +453,6 @@
     "nume": "TOWER 5.1 — DHW 190L (trifazic)",
     "pret": null,
     "sku": "HydroT+EXC-190L-trifazic-5.1"
-   },
-   {
-    "nume": "TOWER 5.1 — DHW 250L (monofazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-250L-monofazic-5.1"
-   },
-   {
-    "nume": "TOWER 5.1 — DHW 250L (trifazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-250L-trifazic-5.1"
    },
    {
     "nume": "TOWER 6.1 — DHW 190L (monofazic)",
@@ -505,16 +465,6 @@
     "sku": "HydroT+EXC-190L-trifazic-6.1"
    },
    {
-    "nume": "TOWER 6.1 — DHW 250L (monofazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-250L-monofazic-6.1"
-   },
-   {
-    "nume": "TOWER 6.1 — DHW 250L (trifazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-250L-trifazic-6.1"
-   },
-   {
     "nume": "TOWER 7.1 — DHW 190L (monofazic)",
     "pret": null,
     "sku": "HydroT+EXC-190L-monofazic-7.1"
@@ -525,16 +475,6 @@
     "sku": "HydroT+EXC-190L-trifazic-7.1"
    },
    {
-    "nume": "TOWER 7.1 — DHW 250L (monofazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-250L-monofazic-7.1"
-   },
-   {
-    "nume": "TOWER 7.1 — DHW 250L (trifazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-250L-trifazic-7.1"
-   },
-   {
     "nume": "TOWER 8.1 — DHW 190L (monofazic)",
     "pret": null,
     "sku": "HydroT+EXC-190L-monofazic-8.1"
@@ -543,16 +483,6 @@
     "nume": "TOWER 8.1 — DHW 190L (trifazic)",
     "pret": null,
     "sku": "HydroT+EXC-190L-trifazic-8.1"
-   },
-   {
-    "nume": "TOWER 8.1 — DHW 250L (monofazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-250L-monofazic-8.1"
-   },
-   {
-    "nume": "TOWER 8.1 — DHW 250L (trifazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-250L-trifazic-8.1"
    }
   ],
   "descriere": "data/descrieri/08.html",
@@ -561,7 +491,7 @@
   "seo_meta": "Pompă de căldură aer-apă Clivet Hydro-Split Tower cu boiler 190-250L integrat, conexiune hidraulică. 28 variante. Consultanță gratuită RIXAIR.",
   "nota_interna": "28 variante",
   "cat": "refrigerant-split",
-  "nume_lung": "Pompă de căldură HYDRO-Split TOWER cu DHW 190–250L 2.1–8.1"
+  "nume_lung": "Pompă de căldură HYDRO-Split TOWER cu DHW 190L 2.1–8.1"
  },
  {
   "nr": 9,
@@ -707,7 +637,28 @@
   "categorie": "pompe",
   "pret_tip": "la_cerere",
   "pret_de_la": null,
-  "variante": [],
+  "variante": [
+   {
+    "nume": "INVISIBLE 2.1 — DHW 150L (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoIC-150L-monofazic-2.1"
+   },
+   {
+    "nume": "INVISIBLE 3.1 — DHW 150L (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoIC-150L-monofazic-3.1"
+   },
+   {
+    "nume": "INVISIBLE 4.1 — DHW 150L (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoIC-150L-monofazic-4.1"
+   },
+   {
+    "nume": "INVISIBLE 5.1 — DHW 150L (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoIC-150L-monofazic-5.1"
+   }
+  ],
   "descriere": "data/descrieri/11.html",
   "poza": "poze/p11.png",
   "seo_title": "Pompă de căldură SPLIT INVISIBLE Sphera EVO + MiSAN-YEE cu DHW 150L 2.1–5.1 | RIXAIR",
@@ -725,7 +676,78 @@
   "categorie": "pompe",
   "pret_tip": "la_cerere",
   "pret_de_la": null,
-  "variante": [],
+  "variante": [
+   {
+    "nume": "TOWER 2.1 + cazan FE 24.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBHT-FE24-monofazic-2.1"
+   },
+   {
+    "nume": "TOWER 3.1 + cazan FE 24.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBHT-FE24-monofazic-3.1"
+   },
+   {
+    "nume": "TOWER 4.1 + cazan FE 24.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBHT-FE24-monofazic-4.1"
+   },
+   {
+    "nume": "TOWER 5.1 + cazan FE 24.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBHT-FE24-monofazic-5.1"
+   },
+   {
+    "nume": "TOWER 6.1 + cazan FE 24.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBHT-FE24-monofazic-6.1"
+   },
+   {
+    "nume": "TOWER 7.1 + cazan FE 24.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBHT-FE24-monofazic-7.1"
+   },
+   {
+    "nume": "TOWER 8.1 + cazan FE 24.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBHT-FE24-monofazic-8.1"
+   },
+   {
+    "nume": "TOWER 2.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBHT-FE33-monofazic-2.1"
+   },
+   {
+    "nume": "TOWER 3.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBHT-FE33-monofazic-3.1"
+   },
+   {
+    "nume": "TOWER 4.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBHT-FE33-monofazic-4.1"
+   },
+   {
+    "nume": "TOWER 5.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBHT-FE33-monofazic-5.1"
+   },
+   {
+    "nume": "TOWER 6.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBHT-FE33-monofazic-6.1"
+   },
+   {
+    "nume": "TOWER 7.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBHT-FE33-monofazic-7.1"
+   },
+   {
+    "nume": "TOWER 8.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBHT-FE33-monofazic-8.1"
+   }
+  ],
   "descriere": "data/descrieri/12.html",
   "poza": "poze/p12.png",
   "seo_title": "Pompă Hibridă Clivet Sphera Tower + Centrală Gaz FE | RIXAIR",
@@ -742,7 +764,43 @@
   "categorie": "pompe",
   "pret_tip": "la_cerere",
   "pret_de_la": null,
-  "variante": [],
+  "variante": [
+   {
+    "nume": "BOX 2.1 + cazan FE 24.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE24-monofazic-2.1"
+   },
+   {
+    "nume": "BOX 3.1 + cazan FE 24.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE24-monofazic-3.1"
+   },
+   {
+    "nume": "BOX 4.1 + cazan FE 24.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE24-monofazic-4.1"
+   },
+   {
+    "nume": "BOX 5.1 + cazan FE 24.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE24-monofazic-5.1"
+   },
+   {
+    "nume": "BOX 6.1 + cazan FE 24.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE24-monofazic-6.1"
+   },
+   {
+    "nume": "BOX 7.1 + cazan FE 24.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE24-monofazic-7.1"
+   },
+   {
+    "nume": "BOX 8.1 + cazan FE 24.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE24-monofazic-8.1"
+   }
+  ],
   "descriere": "data/descrieri/13.html",
   "poza": "poze/p13.png",
   "seo_title": "Pompă de căldură HYBRID BOX Sphera EVO + cazan gaz FE 24.4–33.4 | RIXAIR",
@@ -1028,7 +1086,38 @@
   "categorie": "vcv",
   "pret_tip": "de_la",
   "pret_de_la": 2197,
-  "variante": [],
+  "variante": [
+   {
+    "nume": "ELFOSpace BOX3 007.0",
+    "pret": null,
+    "sku": "ELFOSpace-BOX3-007-inverter"
+   },
+   {
+    "nume": "ELFOSpace BOX3 011.0",
+    "pret": null,
+    "sku": "ELFOSpace-BOX3-011-inverter"
+   },
+   {
+    "nume": "ELFOSpace BOX3 015.0",
+    "pret": null,
+    "sku": "ELFOSpace-BOX3-015-inverter"
+   },
+   {
+    "nume": "ELFOSpace BOX3 021.0",
+    "pret": null,
+    "sku": "ELFOSpace-BOX3-021-inverter"
+   },
+   {
+    "nume": "ELFOSpace BOX3 031.0",
+    "pret": null,
+    "sku": "ELFOSpace-BOX3-031-inverter"
+   },
+   {
+    "nume": "ELFOSpace BOX3 041.0",
+    "pret": null,
+    "sku": "ELFOSpace-BOX3-041-inverter"
+   }
+  ],
   "descriere": "data/descrieri/23.html",
   "poza": "poze/p23.jpg",
   "seo_title": "Casetă Clivet ELFOSpace BOX3 Inverter | RIXAIR",
@@ -1045,7 +1134,33 @@
   "categorie": "vcv",
   "pret_tip": "de_la",
   "pret_de_la": 2945,
-  "variante": [],
+  "variante": [
+   {
+    "nume": "ELFORoom² 003.0",
+    "pret": null,
+    "sku": "Clivet-ELFORoom2-003-inverter"
+   },
+   {
+    "nume": "ELFORoom² 005.0",
+    "pret": null,
+    "sku": "Clivet-ELFORoom2-005-inverter"
+   },
+   {
+    "nume": "ELFORoom² 011.0",
+    "pret": null,
+    "sku": "Clivet-ELFORoom2-011-inverter"
+   },
+   {
+    "nume": "ELFORoom² 015.0",
+    "pret": null,
+    "sku": "Clivet-ELFORoom2-015-inverter"
+   },
+   {
+    "nume": "ELFORoom² 017.0",
+    "pret": null,
+    "sku": "Clivet-ELFORoom2-017-inverter"
+   }
+  ],
   "descriere": "data/descrieri/24.html",
   "poza": "poze/p24.jpg",
   "seo_title": "Ventiloconvector Clivet ELFORoom2 Inverter | RIXAIR",
@@ -1062,7 +1177,48 @@
   "categorie": "vcv",
   "pret_tip": "de_la",
   "pret_de_la": 3711,
-  "variante": [],
+  "variante": [
+   {
+    "nume": "AURA 1 (inverter)",
+    "pret": null,
+    "sku": "Clivet-AURA-1-CFFC-inverter"
+   },
+   {
+    "nume": "AURA 2 (inverter)",
+    "pret": null,
+    "sku": "Clivet-AURA-2-CFFC-inverter"
+   },
+   {
+    "nume": "AURA 3 (inverter)",
+    "pret": null,
+    "sku": "Clivet-AURA-3-CFFC-inverter"
+   },
+   {
+    "nume": "AURA 4 (inverter)",
+    "pret": null,
+    "sku": "Clivet-AURA-4-CFFC-inverter"
+   },
+   {
+    "nume": "AURA 6 (inverter)",
+    "pret": null,
+    "sku": "Clivet-AURA-6-CFFC-inverter"
+   },
+   {
+    "nume": "AURA 8 (inverter)",
+    "pret": null,
+    "sku": "Clivet-AURA-8-CFFC-inverter"
+   },
+   {
+    "nume": "AURA 10 (inverter)",
+    "pret": null,
+    "sku": "Clivet-AURA-10-CFFC-inverter"
+   },
+   {
+    "nume": "AURA 12 (inverter)",
+    "pret": null,
+    "sku": "Clivet-AURA-12-CFFC-inverter"
+   }
+  ],
   "descriere": "data/descrieri/25.html",
   "poza": "poze/p25.jpg",
   "seo_title": "Ventiloconvector Clivet AURA 1-12 INVERTER | RIXAIR",
@@ -1079,7 +1235,48 @@
   "categorie": "vcv",
   "pret_tip": "de_la",
   "pret_de_la": 3991,
-  "variante": [],
+  "variante": [
+   {
+    "nume": "AURA 1 (3 viteze)",
+    "pret": null,
+    "sku": "Clivet-AURA-1-CFFAC-3Viteze"
+   },
+   {
+    "nume": "AURA 2 (3 viteze)",
+    "pret": null,
+    "sku": "Clivet-AURA-2-CFFAC-3Viteze"
+   },
+   {
+    "nume": "AURA 3 (3 viteze)",
+    "pret": null,
+    "sku": "Clivet-AURA-3-CFFAC-3Viteze"
+   },
+   {
+    "nume": "AURA 4 (3 viteze)",
+    "pret": null,
+    "sku": "Clivet-AURA-4-CFFAC-3Viteze"
+   },
+   {
+    "nume": "AURA 6 (3 viteze)",
+    "pret": null,
+    "sku": "Clivet-AURA-6-CFFAC-3Viteze"
+   },
+   {
+    "nume": "AURA 8 (3 viteze)",
+    "pret": null,
+    "sku": "Clivet-AURA-8-CFFAC-3Viteze"
+   },
+   {
+    "nume": "AURA 10 (3 viteze)",
+    "pret": null,
+    "sku": "Clivet-AURA-10-CFFAC-3Viteze"
+   },
+   {
+    "nume": "AURA 12 (3 viteze)",
+    "pret": null,
+    "sku": "Clivet-AURA-12-CFFAC-3Viteze"
+   }
+  ],
   "descriere": "data/descrieri/26.html",
   "poza": "poze/p26.jpg",
   "seo_title": "Ventiloconvector Clivet AURA 1-12 3-Viteze | RIXAIR",
@@ -1096,7 +1293,33 @@
   "categorie": "vcv",
   "pret_tip": "de_la",
   "pret_de_la": 4953,
-  "variante": [],
+  "variante": [
+   {
+    "nume": "MOOD 1",
+    "pret": null,
+    "sku": "Clivet-MOOD-1-cfw2-inverter"
+   },
+   {
+    "nume": "MOOD 2",
+    "pret": null,
+    "sku": "Clivet-MOOD-2-cfw2-inverter"
+   },
+   {
+    "nume": "MOOD 3",
+    "pret": null,
+    "sku": "Clivet-MOOD-3-cfw2-inverter"
+   },
+   {
+    "nume": "MOOD 4",
+    "pret": null,
+    "sku": "Clivet-MOOD-4-cfw2-inverter"
+   },
+   {
+    "nume": "MOOD 5",
+    "pret": null,
+    "sku": "Clivet-MOOD-5-cfw2-inverter"
+   }
+  ],
   "descriere": "data/descrieri/27.html",
   "poza": "poze/p27.png",
   "seo_title": "Ventiloconvector Clivet MOOD CFW-2 de Perete | RIXAIR",
@@ -1104,5 +1327,93 @@
   "nota_interna": "",
   "cat": "ventiloconvectoare",
   "nume_lung": "Ventiloconvector de perete MOOD 1–5 INVERTER CFW-2"
+ },
+ {
+  "nr": 28,
+  "slug": "pompa-de-caldura-hydro-split-tower-cu-dhw-190-250l-2-1-8-1",
+  "nume": "Pompă de căldură HYDRO-Split TOWER cu DHW 250L 2.1–8.1",
+  "sku": "HydroT+EXC-250L",
+  "categorie": "pompe",
+  "pret_tip": "de_la",
+  "pret_de_la": null,
+  "variante": [
+   {
+    "nume": "TOWER 2.1 — DHW 250L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-monofazic-2.1"
+   },
+   {
+    "nume": "TOWER 2.1 — DHW 250L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-trifazic-2.1"
+   },
+   {
+    "nume": "TOWER 3.1 — DHW 250L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-monofazic-3.1"
+   },
+   {
+    "nume": "TOWER 3.1 — DHW 250L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-trifazic-3.1"
+   },
+   {
+    "nume": "TOWER 4.1 — DHW 250L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-monofazic-4.1"
+   },
+   {
+    "nume": "TOWER 4.1 — DHW 250L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-trifazic-4.1"
+   },
+   {
+    "nume": "TOWER 5.1 — DHW 250L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-monofazic-5.1"
+   },
+   {
+    "nume": "TOWER 5.1 — DHW 250L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-trifazic-5.1"
+   },
+   {
+    "nume": "TOWER 6.1 — DHW 250L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-monofazic-6.1"
+   },
+   {
+    "nume": "TOWER 6.1 — DHW 250L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-trifazic-6.1"
+   },
+   {
+    "nume": "TOWER 7.1 — DHW 250L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-monofazic-7.1"
+   },
+   {
+    "nume": "TOWER 7.1 — DHW 250L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-trifazic-7.1"
+   },
+   {
+    "nume": "TOWER 8.1 — DHW 250L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-monofazic-8.1"
+   },
+   {
+    "nume": "TOWER 8.1 — DHW 250L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-trifazic-8.1"
+   }
+  ],
+  "descriere": "data/descrieri/08.html",
+  "poza": "poze/p08.png",
+  "seo_title": "Pompă de Căldură Clivet Hydro-Split TOWER 250L | RIXAIR",
+  "seo_meta": "Pompă de căldură aer-apă Clivet Hydro-Split Tower cu boiler 190-250L integrat, conexiune hidraulică. 28 variante. Consultanță gratuită RIXAIR.",
+  "nota_interna": "28 variante",
+  "cat": "refrigerant-split",
+  "nume_lung": "Pompă de căldură HYDRO-Split TOWER cu DHW 250L 2.1–8.1"
  }
 ]
