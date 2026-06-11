@@ -32,6 +32,12 @@ a{color:#1583ab}
  <p class="muted"><a href="#" id="bForgot">Am uitat parola</a></p>
  <div class="msg" id="m1"></div>
 </div>
+<div id="resetBox" style="display:none">
+ <h1>Setează o parolă nouă</h1>
+ <label>Parola nouă</label><input id="npw" type="password" placeholder="minim 6 caractere">
+ <button class="b1" id="bSetPw">Salvează parola</button>
+ <div class="msg" id="m2"></div>
+</div>
 <div id="acctBox" style="display:none">
  <h1>Bună, <span id="who"></span> 👋</h1>
  <p class="muted">Emailul contului: <b id="who2"></b> · <a href="#" id="bOut">Ieși din cont</a></p>
@@ -80,5 +86,19 @@ $('bForgot').onclick=async function(e){e.preventDefault();
  msg(r.error?('Eroare: '+r.error.message):'Ți-am trimis email cu linkul de resetare.',!r.error);
 };
 document.addEventListener('click',function(e){if(e.target.id==='bOut'){e.preventDefault();sb.auth.signOut().then(refresh);}});
+sb.auth.onAuthStateChange(function(ev){
+ if(ev==='PASSWORD_RECOVERY'){
+  document.getElementById('authBox').style.display='none';
+  document.getElementById('acctBox').style.display='none';
+  document.getElementById('resetBox').style.display='';
+ }
+});
+document.getElementById('bSetPw').onclick=async function(){
+ var r=await sb.auth.updateUser({password:document.getElementById('npw').value});
+ var m=document.getElementById('m2');
+ if(r.error){m.textContent='Eroare: '+r.error.message;m.className='msg err';}
+ else{m.textContent='Parola a fost schimbată! Te ducem la contul tău...';m.className='msg ok';
+  setTimeout(function(){document.getElementById('resetBox').style.display='none';refresh();},1200);}
+};
 refresh();
 </script></body></html>
