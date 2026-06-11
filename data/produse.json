@@ -880,7 +880,7 @@
   "seo_meta": "Sistem hibrid Clivet: pompă de căldură Sphera Tower + centrală pe gaz FE 24.4-33.4 kW cu comutare automată. Boiler 150L. RIXAIR Timișoara.",
   "nota_interna": "BLOCAT: verifica pret 4.532",
   "cat": "split-hibrid-gaz",
-  "nume_lung": "Pompă de căldură HYBRID TOWER Sphera EVO + cazan gaz FE 24.4–33.4 cu DHW"
+  "nume_lung": "Pompă de căldură HYBRID TOWER Sphera EVO 2.1–5.1 + cazan gaz FE 24.4 cu DHW 150L"
  },
  {
   "nr": 13,
@@ -918,7 +918,7 @@
   "seo_meta": "Pompă de căldură HYBRID BOX Sphera EVO + cazan gaz FE 24.4–33.4 — distribuitor oficial Clivet. Cere ofertă: 0722 975 518.",
   "nota_interna": "BLOCAT: pret cazan FE 24.4",
   "cat": "split-hibrid-gaz",
-  "nume_lung": "Pompă de căldură HYBRID BOX Sphera EVO + cazan gaz FE 24.4–33.4"
+  "nume_lung": "Pompă de căldură HYBRID BOX Sphera EVO 2.1–5.1 + cazan gaz FE 24.4"
  },
  {
   "nr": 14,
@@ -1643,7 +1643,7 @@
   "seo_meta": "Sistem hibrid Clivet: pompă de căldură Sphera Tower + centrală pe gaz FE 24.4-33.4 kW cu comutare automată. Boiler 150L. RIXAIR Timișoara.",
   "nota_interna": "BLOCAT: verifica pret 4.532",
   "cat": "split-hibrid-gaz",
-  "nume_lung": "Pompă de căldură HYBRID TOWER Sphera EVO + cazan gaz FE 33.4–33.4 cu DHW"
+  "nume_lung": "Pompă de căldură HYBRID TOWER Sphera EVO 2.1–8.1 + cazan gaz FE 33.4 cu DHW 150L"
  },
  {
   "nr": 30,
@@ -1711,6 +1711,6 @@
   "seo_meta": "Pompă de căldură HYBRID BOX Sphera EVO + cazan gaz FE 24.4–33.4 — distribuitor oficial Clivet. Cere ofertă: 0722 975 518.",
   "nota_interna": "BLOCAT: pret cazan FE 24.4",
   "cat": "split-hibrid-gaz",
-  "nume_lung": "Pompă de căldură HYBRID BOX Sphera EVO + cazan gaz FE 33.4–33.4"
+  "nume_lung": "Pompă de căldură HYBRID BOX Sphera EVO 2.1–8.1 + cazan gaz FE 33.4"
  }
 ]
