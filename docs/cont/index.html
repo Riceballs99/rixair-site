@@ -33,11 +33,12 @@ a{color:#1583ab}
  <div class="msg" id="m1"></div>
 </div>
 <div id="acctBox" style="display:none">
- <h1>Bună, <span id="who"></span></h1>
+ <h1>Bună, <span id="who"></span> 👋</h1>
  <p class="muted">Emailul contului: <b id="who2"></b> · <a href="#" id="bOut">Ieși din cont</a></p>
  <h2>Comenzile mele</h2>
  <div id="orders">Se încarcă...</div>
  <p class="muted">Comenzile plătite cu acest email apar aici automat.</p>
+ <button class="b1" onclick="location.href='/'">Mergi la magazin</button>
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
@@ -71,7 +72,7 @@ $('bReg').onclick=async function(){
  var r=await sb.auth.signUp({email:$('em').value.trim(),password:$('pw').value});
  if(r.error)msg('Eroare: '+r.error.message,0);
  else if(r.data.user&&!r.data.session)msg('Cont creat! Verifică emailul pentru confirmarea contului.',1);
- else refresh();
+ else {msg('Cont creat! Ești logat.',1); refresh();}
 };
 $('bForgot').onclick=async function(e){e.preventDefault();
  var em=$('em').value.trim(); if(!em){msg('Scrie întâi emailul în câmpul de sus.',0);return;}
