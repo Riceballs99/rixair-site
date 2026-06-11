@@ -81,3 +81,12 @@ table.rx-t img{width:54px;height:54px;object-fit:contain}
 .rx-calcbtn a, .main-header .cart-header-btn a.cart-drop{display:inline-flex!important;align-items:center;justify-content:center;width:52px!important;height:52px!important;border-radius:16px!important;margin:0!important;padding:0!important}
 .rx-calcbtn a{background:#e8f4fa!important;color:#1583ab!important}
 .rx-calcbtn a:hover{background:#d5ecf7!important}
+
+/* rx-fullbleed-showroom: banner-ul Showroom Clivet pe toata latimea ecranului */
+.-g-banner-fixed.-g-component-id-4373{
+  width:auto;
+  max-width:none;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+}
+body{overflow-x:hidden}
