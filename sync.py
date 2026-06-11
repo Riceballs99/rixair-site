@@ -14,7 +14,9 @@ def fmt(x):
     return re.sub(r"(?<=\d)(?=(\d{3})+$)", ".", a) + "," + b
 
 def pmin(p):
-    if p.get("variante"): return min(v["pret"] for v in p["variante"])
+    if p.get("variante"):
+        cu_pret = [v["pret"] for v in p["variante"] if v.get("pret")]
+        if cu_pret: return min(cu_pret)
     return p.get("pret_de_la")
 
 STOC_TXT = {"in_stoc": "In stoc", "la_comanda": "La comandă", "ascuns": "Indisponibil"}
@@ -42,14 +44,20 @@ for nr, p in sorted(PR.items()):
     stoc = p.get("stoc", "in_stoc")
     mn = pmin(p)
     card_pret = ("de la %s Lei" % fmt(mn)) if mn else "Preț la cerere"
-    det_pret  = ("%s Lei" % fmt(p["variante"][0]["pret"])) if p.get("variante") else (("de la %s Lei" % fmt(mn)) if mn else "Preț la cerere")
+    if p.get("variante") and p["variante"][0].get("pret"):
+        det_pret = "%s Lei" % fmt(p["variante"][0]["pret"])
+    elif mn:
+        det_pret = "de la %s Lei" % fmt(mn)
+    else:
+        det_pret = "Preț la cerere"
     # ---- pagini detaliu ----
     for rel in info["detalii"]:
         h = load(rel)
         h = re.sub(r'(class="fPrice -g-product-final-price-\d+">)\s*[^<]*', r'\g<1> %s ' % det_pret, h)
         if p.get("variante"):
             opts = "".join('<option data-pret="%s" data-prnum="%s" data-sku="%s">%s</option>' %
-                           (fmt(v["pret"]), v["pret"], H.escape(v["sku"]), H.escape(v["nume"])) for v in p["variante"])
+                           (fmt(v["pret"]) if v.get("pret") else "", v["pret"] if v.get("pret") else "",
+                            H.escape(v["sku"]), H.escape(v["nume"])) for v in p["variante"])
             sel = '<select class="input-s rxVar" style="max-width:300px">%s</select>' % opts
             if re.search(r'<select class="input-s rxVar"', h):
                 h = re.sub(r'<select class="input-s rxVar"[^>]*>.*?</select>', sel, h, flags=re.S)

@@ -45,7 +45,7 @@ async function loadData(){const j=await gh('/contents/data/produse.json');SHA=j.
 function render(){
  $('list').innerHTML=DATA.map((p,i)=>{
   const st=p.stoc||'in_stoc';
-  const vrows=(p.variante||[]).map((v,j)=>`<tr class="vrow"><td>${v.nume}</td><td style="width:130px"><input type="number" step="0.01" value="${v.pret}" onchange="DATA[${i}].variante[${j}].pret=parseFloat(this.value)"></td><td class="tag">${v.sku}</td></tr>`).join('');
+  const vrows=(p.variante||[]).map((v,j)=>`<tr class="vrow"><td>${v.nume}</td><td style="width:130px"><input type="number" step="0.01" value="${v.pret??''}" placeholder="la cerere" onchange="DATA[${i}].variante[${j}].pret=this.value?parseFloat(this.value):null"></td><td class="tag">${v.sku}</td></tr>`).join('');
   const dela=(!p.variante||!p.variante.length)?`<tr class="vrow"><td>Preț „de la" (gol = la cerere)</td><td style="width:130px"><input type="number" step="0.01" value="${p.pret_de_la??''}" onchange="DATA[${i}].pret_de_la=this.value?parseFloat(this.value):null"></td><td></td></tr>`:'';
   return `<div class="card stoc-${st}" id="pc${i}">
    <table><tr><th style="width:55%"><span class="pname">${p.nume}</span><br><span class="tag">${p.sku}</span></th>

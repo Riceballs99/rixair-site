@@ -269,7 +269,43 @@
   "categorie": "pompe",
   "pret_tip": "de_la",
   "pret_de_la": 34111,
-  "variante": [],
+  "variante": [
+   {
+    "nume": "MINI 2.1 — DHW 50L (monofazic)",
+    "pret": null,
+    "sku": "HydroM+EXC-50L-monofazic-2.1"
+   },
+   {
+    "nume": "MINI 3.1 — DHW 50L (monofazic)",
+    "pret": null,
+    "sku": "HydroM+EXC-50L-monofazic-3.1"
+   },
+   {
+    "nume": "MINI 4.1 — DHW 50L (monofazic)",
+    "pret": null,
+    "sku": "HydroM+EXC-50L-monofazic-4.1"
+   },
+   {
+    "nume": "MINI 5.1 — DHW 50L (monofazic)",
+    "pret": null,
+    "sku": "HydroM+EXC-50L-monofazic-5.1"
+   },
+   {
+    "nume": "MINI 6.1 — DHW 50L (monofazic)",
+    "pret": null,
+    "sku": "HydroM+EXC-50L-monofazic-6.1"
+   },
+   {
+    "nume": "MINI 7.1 — DHW 50L (monofazic)",
+    "pret": null,
+    "sku": "HydroM+EXC-50L-monofazic-7.1"
+   },
+   {
+    "nume": "MINI 8.1 — DHW 50L (monofazic)",
+    "pret": null,
+    "sku": "HydroM+EXC-50L-monofazic-8.1"
+   }
+  ],
   "descriere": "data/descrieri/05.html",
   "poza": "poze/p05.jpg",
   "seo_title": "Pompă de Căldură Clivet Hydro-Split MINI cu DHW 50L | RIXAIR",
@@ -286,7 +322,28 @@
   "categorie": "pompe",
   "pret_tip": "de_la",
   "pret_de_la": 13881,
-  "variante": [],
+  "variante": [
+   {
+    "nume": "INVISIBLE 2.1 — DHW 150L (monofazic)",
+    "pret": null,
+    "sku": "H-INVISIBLE+EXC-150L-monof-2.1"
+   },
+   {
+    "nume": "INVISIBLE 3.1 — DHW 150L (monofazic)",
+    "pret": null,
+    "sku": "H-INVISIBLE+EXC-150L-monof-3.1"
+   },
+   {
+    "nume": "INVISIBLE 4.1 — DHW 150L (monofazic)",
+    "pret": null,
+    "sku": "H-INVISIBLE+EXC-150L-monof-4.1"
+   },
+   {
+    "nume": "INVISIBLE 5.1 — DHW 150L (monofazic)",
+    "pret": null,
+    "sku": "H-INVISIBLE+EXC-150L-monof-5.1"
+   }
+  ],
   "descriere": "data/descrieri/06.html",
   "poza": "poze/p06.png",
   "seo_title": "Pompă Clivet Hydro-Split INVISIBLE cu Boiler 150L | RIXAIR",
@@ -303,7 +360,43 @@
   "categorie": "pompe",
   "pret_tip": "de_la",
   "pret_de_la": 12001,
-  "variante": [],
+  "variante": [
+   {
+    "nume": "BOX 2.1 (monofazic)",
+    "pret": null,
+    "sku": "HydroB+EXC-monofazic-2.1"
+   },
+   {
+    "nume": "BOX 3.1 (monofazic)",
+    "pret": null,
+    "sku": "HydroB+EXC-monofazic-3.1"
+   },
+   {
+    "nume": "BOX 4.1 (monofazic)",
+    "pret": null,
+    "sku": "HydroB+EXC-monofazic-4.1"
+   },
+   {
+    "nume": "BOX 5.1 (monofazic)",
+    "pret": null,
+    "sku": "HydroB+EXC-monofazic-5.1"
+   },
+   {
+    "nume": "BOX 6.1 (monofazic)",
+    "pret": null,
+    "sku": "HydroB+EXC-monofazic-6.1"
+   },
+   {
+    "nume": "BOX 7.1 (monofazic)",
+    "pret": null,
+    "sku": "HydroB+EXC-monofazic-7.1"
+   },
+   {
+    "nume": "BOX 8.1 (monofazic)",
+    "pret": null,
+    "sku": "HydroB+EXC-monofazic-8.1"
+   }
+  ],
   "descriere": "data/descrieri/07.html",
   "poza": "poze/p07.png",
   "seo_title": "Pompă de Căldură Clivet Hydro-Split BOX EasyBox | RIXAIR",
@@ -320,7 +413,148 @@
   "categorie": "pompe",
   "pret_tip": "de_la",
   "pret_de_la": 28800,
-  "variante": [],
+  "variante": [
+   {
+    "nume": "TOWER 2.1 — DHW 190L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-190L-monofazic-2.1"
+   },
+   {
+    "nume": "TOWER 2.1 — DHW 190L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-190L-trifazic-2.1"
+   },
+   {
+    "nume": "TOWER 2.1 — DHW 250L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-monofazic-2.1"
+   },
+   {
+    "nume": "TOWER 2.1 — DHW 250L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-trifazic-2.1"
+   },
+   {
+    "nume": "TOWER 3.1 — DHW 190L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-190L-monofazic-3.1"
+   },
+   {
+    "nume": "TOWER 3.1 — DHW 190L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-190L-trifazic-3.1"
+   },
+   {
+    "nume": "TOWER 3.1 — DHW 250L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-monofazic-3.1"
+   },
+   {
+    "nume": "TOWER 3.1 — DHW 250L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-trifazic-3.1"
+   },
+   {
+    "nume": "TOWER 4.1 — DHW 190L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-190L-monofazic-4.1"
+   },
+   {
+    "nume": "TOWER 4.1 — DHW 190L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-190L-trifazic-4.1"
+   },
+   {
+    "nume": "TOWER 4.1 — DHW 250L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-monofazic-4.1"
+   },
+   {
+    "nume": "TOWER 4.1 — DHW 250L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-trifazic-4.1"
+   },
+   {
+    "nume": "TOWER 5.1 — DHW 190L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-190L-monofazic-5.1"
+   },
+   {
+    "nume": "TOWER 5.1 — DHW 190L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-190L-trifazic-5.1"
+   },
+   {
+    "nume": "TOWER 5.1 — DHW 250L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-monofazic-5.1"
+   },
+   {
+    "nume": "TOWER 5.1 — DHW 250L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-trifazic-5.1"
+   },
+   {
+    "nume": "TOWER 6.1 — DHW 190L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-190L-monofazic-6.1"
+   },
+   {
+    "nume": "TOWER 6.1 — DHW 190L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-190L-trifazic-6.1"
+   },
+   {
+    "nume": "TOWER 6.1 — DHW 250L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-monofazic-6.1"
+   },
+   {
+    "nume": "TOWER 6.1 — DHW 250L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-trifazic-6.1"
+   },
+   {
+    "nume": "TOWER 7.1 — DHW 190L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-190L-monofazic-7.1"
+   },
+   {
+    "nume": "TOWER 7.1 — DHW 190L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-190L-trifazic-7.1"
+   },
+   {
+    "nume": "TOWER 7.1 — DHW 250L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-monofazic-7.1"
+   },
+   {
+    "nume": "TOWER 7.1 — DHW 250L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-trifazic-7.1"
+   },
+   {
+    "nume": "TOWER 8.1 — DHW 190L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-190L-monofazic-8.1"
+   },
+   {
+    "nume": "TOWER 8.1 — DHW 190L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-190L-trifazic-8.1"
+   },
+   {
+    "nume": "TOWER 8.1 — DHW 250L (monofazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-monofazic-8.1"
+   },
+   {
+    "nume": "TOWER 8.1 — DHW 250L (trifazic)",
+    "pret": null,
+    "sku": "HydroT+EXC-250L-trifazic-8.1"
+   }
+  ],
   "descriere": "data/descrieri/08.html",
   "poza": "poze/p08.png",
   "seo_title": "Pompă de Căldură Clivet Hydro-Split TOWER 190-250L | RIXAIR",
