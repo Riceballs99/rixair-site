@@ -152,3 +152,28 @@ document.addEventListener('DOMContentLoaded',function(){
  document.addEventListener('change',function(e){if(e.target&&e.target.classList&&e.target.classList.contains('rxVar'))setTimeout(apply,0);},true);
  setTimeout(apply,400); setTimeout(apply,1500);
 })();
+
+/* rx-buy-guard: butonul ADAUGA IN COS + selectorul de cantitate raman mereu prezente si vizibile */
+(function(){
+ var sec=document.querySelector('[class*="-g-product-add-section-"]'); if(!sec) return;
+ var parent=sec.parentNode;
+ var marker=document.createComment('rx-buy-anchor');
+ parent.insertBefore(marker, sec);
+ var html=sec.outerHTML;
+ function ensure(){
+  var s=document.querySelector('[class*="-g-product-add-section-"]');
+  if(!s){
+   var t=document.createElement('div'); t.innerHTML=html;
+   parent.insertBefore(t.firstChild, marker.nextSibling);
+   s=document.querySelector('[class*="-g-product-add-section-"]');
+  }
+  if(s){
+   s.classList.remove('hide'); s.style.display='';
+   s.querySelectorAll('.hide').forEach(function(e){e.classList.remove('hide');});
+  }
+  var st=document.querySelector('[class*="stock-status"]');
+  if(st && st.className.indexOf('unavailable')>-1) st.className=st.className.replace('unavailable','available');
+ }
+ ensure();
+ setInterval(ensure, 700);
+})();
