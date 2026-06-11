@@ -1,0 +1,10 @@
+{
+  "_comentariu": "Configuratie Supabase pentru integrarea viitoare (conturi + comenzi). Cheia publishable e publica prin design - se foloseste in frontend. Cheile secrete NU se pun aici niciodata.",
+  "url": "https://uyynocwfvwmgttckgvzu.supabase.co",
+  "publishable_key": "sb_publishable_psRLYjPPsD3pkDfpLpZfAw_ubdHcm-P",
+  "proiect": "rixair-site",
+  "organizatie": "RIXAIR",
+  "tabele": {
+    "comenzi": "id, numar, created_at, user_id, email, nume, telefon, adresa(jsonb), produse(jsonb), total, status, stripe_session - RLS activ: clientii isi vad doar propriile comenzi"
+  }
+}
