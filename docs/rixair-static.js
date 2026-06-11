@@ -1,3 +1,4 @@
+var RX_CHECKOUT_URL='https://uyynocwfvwmgttckgvzu.supabase.co/functions/v1/stripe-checkout';
 
 (function(){
 var EMAIL='office@rixar.ro';
@@ -56,7 +57,11 @@ function renderCerere(host){
   '<td><button class="rx-x" data-a="m" data-x="'+x+'">&#8722;</button> '+i.qty+' <button class="rx-x" style="color:#2e7d32" data-a="p" data-x="'+x+'">+</button></td>'+
   '<td><button class="rx-x" data-a="d" data-x="'+x+'">&#10005;</button></td></tr>';});
  t+='</table><p style="font-size:16px"><b>Total orientativ'+(inc?'':' (par&#539;ial)')+': '+fmtL(tot)+'</b> <small>cu TVA &#183; pre&#539;ul final se confirm&#259; prin ofert&#259;</small></p>';
- t+='<p><button class="rx-b" id="rxSend">&#9993; Trimite cererea pe email</button><button class="rx-b o" id="rxClear">Gole&#537;te</button></p>';
+ var toate_cu_pret = l.length>0 && l.every(function(i){return i.pret;});
+ t+='<p>';
+ if(toate_cu_pret) t+='<button class="rx-b" id="rxPay" style="background:#f4c340">&#128179; Pl&#259;te&#537;te cu cardul</button>';
+ t+='<button class="rx-b'+(toate_cu_pret?' o':'')+'" id="rxSend">&#9993; Trimite cererea pe email</button><button class="rx-b o" id="rxClear">Gole&#537;te</button></p>';
+ if(!toate_cu_pret && l.some(function(i){return !i.pret;})) t+='<p style="font-size:13px;color:#888">Unele produse au pre&#539; la cerere &#8212; pentru ele trimite cererea pe email.</p>';
  t+='<p style="font-size:13px;color:#666">Se deschide emailul t&#259;u cu lista completat&#259; &#8212; adaug&#259; numele &#537;i telefonul. Sau sun&#259;-ne direct.</p>';
  host.innerHTML=t;
  host.querySelectorAll('.rx-x').forEach(function(b){b.addEventListener('click',function(){
@@ -69,6 +74,14 @@ function renderCerere(host){
   b+='\nNume:\nTelefon:\nLocalitate / judet:\n\nMultumesc!';
   location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent('Cerere de oferta (rixair.ro)')+'&body='+encodeURIComponent(b);});
  var cb=host.querySelector('#rxClear');if(cb)cb.addEventListener('click',function(){qset([]);renderCerere(host);});
+ var pb=host.querySelector('#rxPay');if(pb)pb.addEventListener('click',function(){
+  pb.disabled=true;pb.textContent='Se deschide plata...';
+  var items=qget().map(function(i){return {sku:i.sku, qty:i.qty};});
+  fetch(RX_CHECKOUT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({items:items})})
+   .then(function(r){return r.json();})
+   .then(function(d){if(d.url){location.href=d.url;}else{throw new Error(d.error||'eroare');}})
+   .catch(function(e){pb.disabled=false;pb.textContent='\uD83D\uDCB3 Pl\u0103te\u0219te cu cardul';alert('Plata nu a putut porni: '+e.message+'\nPo\u021Bi trimite cererea pe email.');});
+ });
 }
 function renderCauta(host){
  document.body.classList.add('rx-cos');
