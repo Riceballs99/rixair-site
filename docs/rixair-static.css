@@ -90,3 +90,11 @@ table.rx-t img{width:54px;height:54px;object-fit:contain}
   margin-right:calc(50% - 50vw);
 }
 body{overflow-x:hidden}
+
+/* rx-cos-layout: logo stanga, continut sus, pagina mai inalta */
+body.rx-cos .main-header{display:flex;align-items:center;justify-content:flex-start;padding:8px 36px;}
+body.rx-cos .main-header .logo-h, body.rx-cos .main-header #logo{margin:0;text-align:left;}
+body.rx-cos .main-header img{max-height:72px;width:auto;}
+body.rx-cos #shoppingcart{min-height:62vh;padding-top:8px;}
+body.rx-cos .rx-t{margin-top:6px;}
+body.rx-cos .cart-header{margin-left:0!important;padding-left:28px;}
