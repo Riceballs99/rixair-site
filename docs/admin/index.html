@@ -67,9 +67,14 @@ async function incarcaComenzi(){
  r.data.forEach(function(c){
   var prods=(c.produse||[]).map(function(p){return (p.cantitate>1?p.cantitate+' × ':'')+(p.descriere||'');}).join('<br>');
   var client=(c.nume?c.nume+'<br>':'')+'<span class="tag">'+c.email+'</span>'+(c.telefon?'<br>'+c.telefon:'');
-  t+='<tr><td><b>#'+c.numar+'</b></td><td>'+new Date(c.created_at).toLocaleString('ro-RO')+'</td><td>'+client+'</td><td>'+prods+'</td><td style="text-align:right"><b>'+new Intl.NumberFormat('ro-RO',{minimumFractionDigits:2}).format(c.total)+' Lei</b></td><td>'+c.status+'</td></tr>';
+  var sel='<select onchange="schimbaStatus('+c.numar+', this.value)" style="padding:4px 8px;border-radius:8px;border:1px solid #ddd">'+['platita','procesata','livrata','anulata'].map(function(s){return '<option'+(s===c.status?' selected':'')+'>'+s+'</option>';}).join('')+'</select>';
+  t+='<tr><td><b>#'+c.numar+'</b></td><td>'+new Date(c.created_at).toLocaleString('ro-RO')+'</td><td>'+client+'</td><td>'+prods+'</td><td style="text-align:right"><b>'+new Intl.NumberFormat('ro-RO',{minimumFractionDigits:2}).format(c.total)+' Lei</b></td><td>'+sel+'</td></tr>';
  });
  host.innerHTML=t+'</table>';
+}
+async function schimbaStatus(numar, status){
+ var r=await SB.from('comenzi').update({status:status}).eq('numar',numar);
+ if(r.error)alert('Nu am putut schimba statusul: '+r.error.message);
 }
 let SHA=null, DATA=null;
 const $=id=>document.getElementById(id);
