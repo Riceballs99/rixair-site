@@ -55,9 +55,22 @@ for nr, p in sorted(PR.items()):
         h = load(rel)
         h = re.sub(r'(class="fPrice -g-product-final-price-\d+">)\s*[^<]*', r'\g<1> %s ' % det_pret, h)
         if p.get("variante"):
-            opts = "".join('<option data-pret="%s" data-prnum="%s" data-sku="%s">%s</option>' %
-                           (fmt(v["pret"]) if v.get("pret") else "", v["pret"] if v.get("pret") else "",
-                            H.escape(v["sku"]), H.escape(v["nume"])) for v in p["variante"])
+            def opt(v):
+                return '<option data-pret="%s" data-prnum="%s" data-sku="%s">%s</option>' % (
+                    fmt(v["pret"]) if v.get("pret") else "", v["pret"] if v.get("pret") else "",
+                    H.escape(v["sku"]), H.escape(v["nume"]))
+            if any(v.get("grup") for v in p["variante"]):
+                opts = ""; gcur = None; deschis = False
+                for v in p["variante"]:
+                    g = v.get("grup")
+                    if g != gcur:
+                        if deschis: opts += "</optgroup>"; deschis = False
+                        if g: opts += '<optgroup label="%s">' % H.escape(g); deschis = True
+                        gcur = g
+                    opts += opt(v)
+                if deschis: opts += "</optgroup>"
+            else:
+                opts = "".join(opt(v) for v in p["variante"])
             sel = '<select class="input-s rxVar" style="max-width:300px">%s</select>' % opts
             if re.search(r'<select class="input-s rxVar"', h):
                 h = re.sub(r'<select class="input-s rxVar"[^>]*>.*?</select>', sel, h, flags=re.S)

@@ -271,39 +271,124 @@
   "pret_de_la": 34111,
   "variante": [
    {
-    "nume": "MINI 2.1 — DHW 50L (monofazic)",
+    "nume": "2.1 — monofazic",
     "pret": null,
-    "sku": "HydroM+EXC-50L-monofazic-2.1"
+    "sku": "HydroM+EXC-50L-monofazic-2.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "MINI 3.1 — DHW 50L (monofazic)",
+    "nume": "3.1 — monofazic",
     "pret": null,
-    "sku": "HydroM+EXC-50L-monofazic-3.1"
+    "sku": "HydroM+EXC-50L-monofazic-3.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "MINI 4.1 — DHW 50L (monofazic)",
+    "nume": "4.1 — monofazic",
     "pret": null,
-    "sku": "HydroM+EXC-50L-monofazic-4.1"
+    "sku": "HydroM+EXC-50L-monofazic-4.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "MINI 5.1 — DHW 50L (monofazic)",
+    "nume": "5.1 — monofazic",
     "pret": null,
-    "sku": "HydroM+EXC-50L-monofazic-5.1"
+    "sku": "HydroM+EXC-50L-monofazic-5.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "MINI 6.1 — DHW 50L (monofazic)",
+    "nume": "6.1 — monofazic",
     "pret": null,
-    "sku": "HydroM+EXC-50L-monofazic-6.1"
+    "sku": "HydroM+EXC-50L-monofazic-6.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "MINI 7.1 — DHW 50L (monofazic)",
+    "nume": "7.1 — monofazic",
     "pret": null,
-    "sku": "HydroM+EXC-50L-monofazic-7.1"
+    "sku": "HydroM+EXC-50L-monofazic-7.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "MINI 8.1 — DHW 50L (monofazic)",
+    "nume": "8.1 — monofazic",
     "pret": null,
-    "sku": "HydroM+EXC-50L-monofazic-8.1"
+    "sku": "HydroM+EXC-50L-monofazic-8.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
+   },
+   {
+    "nume": "6.1 — trifazic",
+    "pret": null,
+    "sku": "HydroM+EXC-50L-trifazic-6.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
+   },
+   {
+    "nume": "7.1 — trifazic",
+    "pret": null,
+    "sku": "HydroM+EXC-50L-trifazic-7.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
+   },
+   {
+    "nume": "8.1 — trifazic",
+    "pret": null,
+    "sku": "HydroM+EXC-50L-trifazic-8.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
+   },
+   {
+    "nume": "2.1 — monofazic",
+    "pret": null,
+    "sku": "HydroM+EdgeF-50L-monofazic-2.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "3.1 — monofazic",
+    "pret": null,
+    "sku": "HydroM+EdgeF-50L-monofazic-3.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "4.1 — monofazic",
+    "pret": null,
+    "sku": "HydroM+EdgeF-50L-monofazic-4.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "5.1 — monofazic",
+    "pret": null,
+    "sku": "HydroM+EdgeF-50L-monofazic-5.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "6.1 — monofazic",
+    "pret": null,
+    "sku": "HydroM+EdgeF-50L-monofazic-6.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "7.1 — monofazic",
+    "pret": null,
+    "sku": "HydroM+EdgeF-50L-monofazic-7.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "8.1 — monofazic",
+    "pret": null,
+    "sku": "HydroM+EdgeF-50L-monofazic-8.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "6.1 — trifazic",
+    "pret": null,
+    "sku": "HydroM+EdgeF-50L-trifazic-6.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "7.1 — trifazic",
+    "pret": null,
+    "sku": "HydroM+EdgeF-50L-trifazic-7.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "8.1 — trifazic",
+    "pret": null,
+    "sku": "HydroM+EdgeF-50L-trifazic-8.1",
+    "grup": "ODU Edge F (R-290)"
    }
   ],
   "descriere": "data/descrieri/05.html",
@@ -324,24 +409,52 @@
   "pret_de_la": 13881,
   "variante": [
    {
-    "nume": "INVISIBLE 2.1 — DHW 150L (monofazic)",
+    "nume": "2.1 — monofazic",
     "pret": null,
-    "sku": "H-INVISIBLE+EXC-150L-monof-2.1"
+    "sku": "H-INVISIBLE+EXC-150L-monof-2.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "INVISIBLE 3.1 — DHW 150L (monofazic)",
+    "nume": "3.1 — monofazic",
     "pret": null,
-    "sku": "H-INVISIBLE+EXC-150L-monof-3.1"
+    "sku": "H-INVISIBLE+EXC-150L-monof-3.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "INVISIBLE 4.1 — DHW 150L (monofazic)",
+    "nume": "4.1 — monofazic",
     "pret": null,
-    "sku": "H-INVISIBLE+EXC-150L-monof-4.1"
+    "sku": "H-INVISIBLE+EXC-150L-monof-4.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "INVISIBLE 5.1 — DHW 150L (monofazic)",
+    "nume": "5.1 — monofazic",
     "pret": null,
-    "sku": "H-INVISIBLE+EXC-150L-monof-5.1"
+    "sku": "H-INVISIBLE+EXC-150L-monof-5.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
+   },
+   {
+    "nume": "2.1 — monofazic",
+    "pret": null,
+    "sku": "HInvisible150L+EdgeF-monof-2.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "3.1 — monofazic",
+    "pret": null,
+    "sku": "HInvisible150L+EdgeF-monof-3.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "4.1 — monofazic",
+    "pret": null,
+    "sku": "HInvisible150L+EdgeF-monof-4.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "5.1 — monofazic",
+    "pret": null,
+    "sku": "HInvisible150L+EdgeF-monof-5.1",
+    "grup": "ODU Edge F (R-290)"
    }
   ],
   "descriere": "data/descrieri/06.html",
@@ -362,39 +475,124 @@
   "pret_de_la": 12001,
   "variante": [
    {
-    "nume": "BOX 2.1 (monofazic)",
+    "nume": "2.1 — monofazic",
     "pret": null,
-    "sku": "HydroB+EXC-monofazic-2.1"
+    "sku": "HydroB+EXC-monofazic-2.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "BOX 3.1 (monofazic)",
+    "nume": "3.1 — monofazic",
     "pret": null,
-    "sku": "HydroB+EXC-monofazic-3.1"
+    "sku": "HydroB+EXC-monofazic-3.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "BOX 4.1 (monofazic)",
+    "nume": "4.1 — monofazic",
     "pret": null,
-    "sku": "HydroB+EXC-monofazic-4.1"
+    "sku": "HydroB+EXC-monofazic-4.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "BOX 5.1 (monofazic)",
+    "nume": "5.1 — monofazic",
     "pret": null,
-    "sku": "HydroB+EXC-monofazic-5.1"
+    "sku": "HydroB+EXC-monofazic-5.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "BOX 6.1 (monofazic)",
+    "nume": "6.1 — monofazic",
     "pret": null,
-    "sku": "HydroB+EXC-monofazic-6.1"
+    "sku": "HydroB+EXC-monofazic-6.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "BOX 7.1 (monofazic)",
+    "nume": "7.1 — monofazic",
     "pret": null,
-    "sku": "HydroB+EXC-monofazic-7.1"
+    "sku": "HydroB+EXC-monofazic-7.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "BOX 8.1 (monofazic)",
+    "nume": "8.1 — monofazic",
     "pret": null,
-    "sku": "HydroB+EXC-monofazic-8.1"
+    "sku": "HydroB+EXC-monofazic-8.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
+   },
+   {
+    "nume": "6.1 — trifazic",
+    "pret": null,
+    "sku": "HydroB+EXC-trifazic-6.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
+   },
+   {
+    "nume": "7.1 — trifazic",
+    "pret": null,
+    "sku": "HydroB+EXC-trifazic-7.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
+   },
+   {
+    "nume": "8.1 — trifazic",
+    "pret": null,
+    "sku": "HydroB+EXC-trifazic-8.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
+   },
+   {
+    "nume": "2.1 — monofazic",
+    "pret": null,
+    "sku": "HydroB+EdgeF-monofazic-2.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "3.1 — monofazic",
+    "pret": null,
+    "sku": "HydroB+EdgeF-monofazic-3.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "4.1 — monofazic",
+    "pret": null,
+    "sku": "HydroB+EdgeF-monofazic-4.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "5.1 — monofazic",
+    "pret": null,
+    "sku": "HydroB+EdgeF-monofazic-5.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "6.1 — monofazic",
+    "pret": null,
+    "sku": "HydroB+EdgeF-monofazic-6.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "7.1 — monofazic",
+    "pret": null,
+    "sku": "HydroB+EdgeF-monofazic-7.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "8.1 — monofazic",
+    "pret": null,
+    "sku": "HydroB+EdgeF-monofazic-8.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "6.1 — trifazic",
+    "pret": null,
+    "sku": "HydroB+EdgeF-trifazic-6.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "7.1 — trifazic",
+    "pret": null,
+    "sku": "HydroB+EdgeF-trifazic-7.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "8.1 — trifazic",
+    "pret": null,
+    "sku": "HydroB+EdgeF-trifazic-8.1",
+    "grup": "ODU Edge F (R-290)"
    }
   ],
   "descriere": "data/descrieri/07.html",
@@ -408,81 +606,59 @@
  {
   "nr": 8,
   "slug": "pompa-de-caldura-hydro-split-tower-cu-dhw-190-250l-2-1-8-1",
-  "nume": "Pompă de căldură HYDRO-Split TOWER cu DHW 190L 2.1–8.1",
+  "nume": "Pompă de căldură HYDRO-Split TOWER cu DHW 190L 2.1–5.1",
   "sku": "HydroT+EXC-190L",
   "categorie": "pompe",
   "pret_tip": "de_la",
   "pret_de_la": 28800,
   "variante": [
    {
-    "nume": "TOWER 2.1 — DHW 190L (monofazic)",
+    "nume": "2.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-190L-monofazic-2.1"
+    "sku": "HydroT+EXC-190L-monofazic-2.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "TOWER 2.1 — DHW 190L (trifazic)",
+    "nume": "3.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-190L-trifazic-2.1"
+    "sku": "HydroT+EXC-190L-monofazic-3.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "TOWER 3.1 — DHW 190L (monofazic)",
+    "nume": "4.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-190L-monofazic-3.1"
+    "sku": "HydroT+EXC-190L-monofazic-4.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "TOWER 3.1 — DHW 190L (trifazic)",
+    "nume": "5.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-190L-trifazic-3.1"
+    "sku": "HydroT+EXC-190L-monofazic-5.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "TOWER 4.1 — DHW 190L (monofazic)",
+    "nume": "2.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-190L-monofazic-4.1"
+    "sku": "HydroT190L+EdgeF-monofazic-2.1",
+    "grup": "ODU Edge F (R-290)"
    },
    {
-    "nume": "TOWER 4.1 — DHW 190L (trifazic)",
+    "nume": "3.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-190L-trifazic-4.1"
+    "sku": "HydroT190L+EdgeF-monofazic-3.1",
+    "grup": "ODU Edge F (R-290)"
    },
    {
-    "nume": "TOWER 5.1 — DHW 190L (monofazic)",
+    "nume": "4.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-190L-monofazic-5.1"
+    "sku": "HydroT190L+EdgeF-monofazic-4.1",
+    "grup": "ODU Edge F (R-290)"
    },
    {
-    "nume": "TOWER 5.1 — DHW 190L (trifazic)",
+    "nume": "5.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-190L-trifazic-5.1"
-   },
-   {
-    "nume": "TOWER 6.1 — DHW 190L (monofazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-190L-monofazic-6.1"
-   },
-   {
-    "nume": "TOWER 6.1 — DHW 190L (trifazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-190L-trifazic-6.1"
-   },
-   {
-    "nume": "TOWER 7.1 — DHW 190L (monofazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-190L-monofazic-7.1"
-   },
-   {
-    "nume": "TOWER 7.1 — DHW 190L (trifazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-190L-trifazic-7.1"
-   },
-   {
-    "nume": "TOWER 8.1 — DHW 190L (monofazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-190L-monofazic-8.1"
-   },
-   {
-    "nume": "TOWER 8.1 — DHW 190L (trifazic)",
-    "pret": null,
-    "sku": "HydroT+EXC-190L-trifazic-8.1"
+    "sku": "HydroT190L+EdgeF-monofazic-5.1",
+    "grup": "ODU Edge F (R-290)"
    }
   ],
   "descriere": "data/descrieri/08.html",
@@ -491,7 +667,7 @@
   "seo_meta": "Pompă de căldură aer-apă Clivet Hydro-Split Tower cu boiler 190-250L integrat, conexiune hidraulică. 28 variante. Consultanță gratuită RIXAIR.",
   "nota_interna": "28 variante",
   "cat": "refrigerant-split",
-  "nume_lung": "Pompă de căldură HYDRO-Split TOWER cu DHW 190L 2.1–8.1"
+  "nume_lung": "Pompă de căldură HYDRO-Split TOWER cu DHW 190L 2.1–5.1"
  },
  {
   "nr": 9,
@@ -671,7 +847,7 @@
  {
   "nr": 12,
   "slug": "pompa-de-caldura-hybrid-tower-sphera-evo-cazan-gaz-fe-24-4-33-4-cu-dhw",
-  "nume": "Pompă de căldură HYBRID TOWER Sphera EVO + cazan gaz FE 24.4–33.4 cu DHW",
+  "nume": "Pompă de căldură HYBRID TOWER Sphera EVO + cazan gaz FE 24.4",
   "sku": "SpheraBH(T)-FE24",
   "categorie": "pompe",
   "pret_tip": "la_cerere",
@@ -680,72 +856,22 @@
    {
     "nume": "TOWER 2.1 + cazan FE 24.4 (monofazic)",
     "pret": null,
-    "sku": "SpheraBHT-FE24-monofazic-2.1"
+    "sku": "SpheraBH(T)-FE24-monofazic-2.1"
    },
    {
     "nume": "TOWER 3.1 + cazan FE 24.4 (monofazic)",
     "pret": null,
-    "sku": "SpheraBHT-FE24-monofazic-3.1"
+    "sku": "SpheraBH(T)-FE24-monofazic-3.1"
    },
    {
     "nume": "TOWER 4.1 + cazan FE 24.4 (monofazic)",
     "pret": null,
-    "sku": "SpheraBHT-FE24-monofazic-4.1"
+    "sku": "SpheraBH(T)-FE24-monofazic-4.1"
    },
    {
     "nume": "TOWER 5.1 + cazan FE 24.4 (monofazic)",
     "pret": null,
-    "sku": "SpheraBHT-FE24-monofazic-5.1"
-   },
-   {
-    "nume": "TOWER 6.1 + cazan FE 24.4 (monofazic)",
-    "pret": null,
-    "sku": "SpheraBHT-FE24-monofazic-6.1"
-   },
-   {
-    "nume": "TOWER 7.1 + cazan FE 24.4 (monofazic)",
-    "pret": null,
-    "sku": "SpheraBHT-FE24-monofazic-7.1"
-   },
-   {
-    "nume": "TOWER 8.1 + cazan FE 24.4 (monofazic)",
-    "pret": null,
-    "sku": "SpheraBHT-FE24-monofazic-8.1"
-   },
-   {
-    "nume": "TOWER 2.1 + cazan FE 33.4 (monofazic)",
-    "pret": null,
-    "sku": "SpheraBHT-FE33-monofazic-2.1"
-   },
-   {
-    "nume": "TOWER 3.1 + cazan FE 33.4 (monofazic)",
-    "pret": null,
-    "sku": "SpheraBHT-FE33-monofazic-3.1"
-   },
-   {
-    "nume": "TOWER 4.1 + cazan FE 33.4 (monofazic)",
-    "pret": null,
-    "sku": "SpheraBHT-FE33-monofazic-4.1"
-   },
-   {
-    "nume": "TOWER 5.1 + cazan FE 33.4 (monofazic)",
-    "pret": null,
-    "sku": "SpheraBHT-FE33-monofazic-5.1"
-   },
-   {
-    "nume": "TOWER 6.1 + cazan FE 33.4 (monofazic)",
-    "pret": null,
-    "sku": "SpheraBHT-FE33-monofazic-6.1"
-   },
-   {
-    "nume": "TOWER 7.1 + cazan FE 33.4 (monofazic)",
-    "pret": null,
-    "sku": "SpheraBHT-FE33-monofazic-7.1"
-   },
-   {
-    "nume": "TOWER 8.1 + cazan FE 33.4 (monofazic)",
-    "pret": null,
-    "sku": "SpheraBHT-FE33-monofazic-8.1"
+    "sku": "SpheraBH(T)-FE24-monofazic-5.1"
    }
   ],
   "descriere": "data/descrieri/12.html",
@@ -759,7 +885,7 @@
  {
   "nr": 13,
   "slug": "pompa-de-caldura-hybrid-box-sphera-evo-cazan-gaz-fe-24-4-33-4",
-  "nume": "Pompă de căldură HYBRID BOX Sphera EVO + cazan gaz FE 24.4–33.4",
+  "nume": "Pompă de căldură HYBRID BOX Sphera EVO + cazan gaz FE 24.4",
   "sku": "SpheraEvoBH-FE24",
   "categorie": "pompe",
   "pret_tip": "la_cerere",
@@ -784,21 +910,6 @@
     "nume": "BOX 5.1 + cazan FE 24.4 (monofazic)",
     "pret": null,
     "sku": "SpheraEvoBH-FE24-monofazic-5.1"
-   },
-   {
-    "nume": "BOX 6.1 + cazan FE 24.4 (monofazic)",
-    "pret": null,
-    "sku": "SpheraEvoBH-FE24-monofazic-6.1"
-   },
-   {
-    "nume": "BOX 7.1 + cazan FE 24.4 (monofazic)",
-    "pret": null,
-    "sku": "SpheraEvoBH-FE24-monofazic-7.1"
-   },
-   {
-    "nume": "BOX 8.1 + cazan FE 24.4 (monofazic)",
-    "pret": null,
-    "sku": "SpheraEvoBH-FE24-monofazic-8.1"
    }
   ],
   "descriere": "data/descrieri/13.html",
@@ -1338,74 +1449,124 @@
   "pret_de_la": null,
   "variante": [
    {
-    "nume": "TOWER 2.1 — DHW 250L (monofazic)",
+    "nume": "2.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-250L-monofazic-2.1"
+    "sku": "HydroT+EXC-250L-monofazic-2.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "TOWER 2.1 — DHW 250L (trifazic)",
+    "nume": "3.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-250L-trifazic-2.1"
+    "sku": "HydroT+EXC-250L-monofazic-3.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "TOWER 3.1 — DHW 250L (monofazic)",
+    "nume": "4.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-250L-monofazic-3.1"
+    "sku": "HydroT+EXC-250L-monofazic-4.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "TOWER 3.1 — DHW 250L (trifazic)",
+    "nume": "5.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-250L-trifazic-3.1"
+    "sku": "HydroT+EXC-250L-monofazic-5.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "TOWER 4.1 — DHW 250L (monofazic)",
+    "nume": "6.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-250L-monofazic-4.1"
+    "sku": "HydroT+EXC-250L-monofazic-6.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "TOWER 4.1 — DHW 250L (trifazic)",
+    "nume": "7.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-250L-trifazic-4.1"
+    "sku": "HydroT+EXC-250L-monofazic-7.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "TOWER 5.1 — DHW 250L (monofazic)",
+    "nume": "8.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-250L-monofazic-5.1"
+    "sku": "HydroT+EXC-250L-monofazic-8.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "TOWER 5.1 — DHW 250L (trifazic)",
+    "nume": "6.1 — trifazic",
     "pret": null,
-    "sku": "HydroT+EXC-250L-trifazic-5.1"
+    "sku": "HydroT+EXC-250L-trifazic-6.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "TOWER 6.1 — DHW 250L (monofazic)",
+    "nume": "7.1 — trifazic",
     "pret": null,
-    "sku": "HydroT+EXC-250L-monofazic-6.1"
+    "sku": "HydroT+EXC-250L-trifazic-7.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "TOWER 6.1 — DHW 250L (trifazic)",
+    "nume": "8.1 — trifazic",
     "pret": null,
-    "sku": "HydroT+EXC-250L-trifazic-6.1"
+    "sku": "HydroT+EXC-250L-trifazic-8.1",
+    "grup": "ODU Edge EVO EXC (R-32)"
    },
    {
-    "nume": "TOWER 7.1 — DHW 250L (monofazic)",
+    "nume": "2.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-250L-monofazic-7.1"
+    "sku": "HydroT250L+EdgeF-monofazic-2.1",
+    "grup": "ODU Edge F (R-290)"
    },
    {
-    "nume": "TOWER 7.1 — DHW 250L (trifazic)",
+    "nume": "3.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-250L-trifazic-7.1"
+    "sku": "HydroT250L+EdgeF-monofazic-3.1",
+    "grup": "ODU Edge F (R-290)"
    },
    {
-    "nume": "TOWER 8.1 — DHW 250L (monofazic)",
+    "nume": "4.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-250L-monofazic-8.1"
+    "sku": "HydroT250L+EdgeF-monofazic-4.1",
+    "grup": "ODU Edge F (R-290)"
    },
    {
-    "nume": "TOWER 8.1 — DHW 250L (trifazic)",
+    "nume": "5.1 — monofazic",
     "pret": null,
-    "sku": "HydroT+EXC-250L-trifazic-8.1"
+    "sku": "HydroT250L+EdgeF-monofazic-5.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "6.1 — monofazic",
+    "pret": null,
+    "sku": "HydroT250L+EdgeF-monofazic-6.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "7.1 — monofazic",
+    "pret": null,
+    "sku": "HydroT250L+EdgeF-monofazic-7.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "8.1 — monofazic",
+    "pret": null,
+    "sku": "HydroT250L+EdgeF-monofazic-8.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "6.1 — trifazic",
+    "pret": null,
+    "sku": "HydroT250L+EdgeF-trifazic-6.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "7.1 — trifazic",
+    "pret": null,
+    "sku": "HydroT250L+EdgeF-trifazic-7.1",
+    "grup": "ODU Edge F (R-290)"
+   },
+   {
+    "nume": "8.1 — trifazic",
+    "pret": null,
+    "sku": "HydroT250L+EdgeF-trifazic-8.1",
+    "grup": "ODU Edge F (R-290)"
    }
   ],
   "descriere": "data/descrieri/08.html",
@@ -1415,5 +1576,141 @@
   "nota_interna": "28 variante",
   "cat": "refrigerant-split",
   "nume_lung": "Pompă de căldură HYDRO-Split TOWER cu DHW 250L 2.1–8.1"
+ },
+ {
+  "nr": 29,
+  "slug": "pompa-de-caldura-hybrid-tower-sphera-evo-cazan-gaz-fe-24-4-33-4-cu-dhw",
+  "nume": "Pompă de căldură HYBRID TOWER Sphera EVO + cazan gaz FE 33.4",
+  "sku": "SpheraBH(T)-FE34",
+  "categorie": "pompe",
+  "pret_tip": "la_cerere",
+  "pret_de_la": null,
+  "variante": [
+   {
+    "nume": "TOWER 2.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBH(T)-FE34-monofazic-2.1"
+   },
+   {
+    "nume": "TOWER 3.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBH(T)-FE34-monofazic-3.1"
+   },
+   {
+    "nume": "TOWER 4.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBH(T)-FE34-monofazic-4.1"
+   },
+   {
+    "nume": "TOWER 5.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBH(T)-FE34-monofazic-5.1"
+   },
+   {
+    "nume": "TOWER 6.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBH(T)-FE34-monofazic-6.1"
+   },
+   {
+    "nume": "TOWER 7.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBH(T)-FE34-monofazic-7.1"
+   },
+   {
+    "nume": "TOWER 8.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraBH(T)-FE34-monofazic-8.1"
+   },
+   {
+    "nume": "TOWER 6.1 + cazan FE 33.4 (trifazic)",
+    "pret": null,
+    "sku": "SpheraBH(T)-FE34-trifazic-6.1"
+   },
+   {
+    "nume": "TOWER 7.1 + cazan FE 33.4 (trifazic)",
+    "pret": null,
+    "sku": "SpheraBH(T)-FE34-trifazic-7.1"
+   },
+   {
+    "nume": "TOWER 8.1 + cazan FE 33.4 (trifazic)",
+    "pret": null,
+    "sku": "SpheraBH(T)-FE34-trifazic-8.1"
+   }
+  ],
+  "descriere": "data/descrieri/12.html",
+  "poza": "poze/p12.png",
+  "seo_title": "Pompă Hibridă Clivet Sphera Tower + Centrală Gaz FE | RIXAIR",
+  "seo_meta": "Sistem hibrid Clivet: pompă de căldură Sphera Tower + centrală pe gaz FE 24.4-33.4 kW cu comutare automată. Boiler 150L. RIXAIR Timișoara.",
+  "nota_interna": "BLOCAT: verifica pret 4.532",
+  "cat": "split-hibrid-gaz",
+  "nume_lung": "Pompă de căldură HYBRID TOWER Sphera EVO + cazan gaz FE 33.4–33.4 cu DHW"
+ },
+ {
+  "nr": 30,
+  "slug": "pompa-de-caldura-hybrid-box-sphera-evo-cazan-gaz-fe-24-4-33-4",
+  "nume": "Pompă de căldură HYBRID BOX Sphera EVO + cazan gaz FE 33.4",
+  "sku": "SpheraEvoBH-FE34",
+  "categorie": "pompe",
+  "pret_tip": "la_cerere",
+  "pret_de_la": null,
+  "variante": [
+   {
+    "nume": "BOX 2.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE34-monofazic-2.1"
+   },
+   {
+    "nume": "BOX 3.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE34-monofazic-3.1"
+   },
+   {
+    "nume": "BOX 4.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE34-monofazic-4.1"
+   },
+   {
+    "nume": "BOX 5.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE34-monofazic-5.1"
+   },
+   {
+    "nume": "BOX 6.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE34-monofazic-6.1"
+   },
+   {
+    "nume": "BOX 7.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE34-monofazic-7.1"
+   },
+   {
+    "nume": "BOX 8.1 + cazan FE 33.4 (monofazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE34-monofazic-8.1"
+   },
+   {
+    "nume": "BOX 6.1 + cazan FE 33.4 (trifazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE34-trifazic-6.1"
+   },
+   {
+    "nume": "BOX 7.1 + cazan FE 33.4 (trifazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE34-trifazic-7.1"
+   },
+   {
+    "nume": "BOX 8.1 + cazan FE 33.4 (trifazic)",
+    "pret": null,
+    "sku": "SpheraEvoBH-FE34-trifazic-8.1"
+   }
+  ],
+  "descriere": "data/descrieri/13.html",
+  "poza": "poze/p13.png",
+  "seo_title": "Pompă de căldură HYBRID BOX Sphera EVO + cazan gaz FE 33.4–33.4 | RIXAIR",
+  "seo_meta": "Pompă de căldură HYBRID BOX Sphera EVO + cazan gaz FE 24.4–33.4 — distribuitor oficial Clivet. Cere ofertă: 0722 975 518.",
+  "nota_interna": "BLOCAT: pret cazan FE 24.4",
+  "cat": "split-hibrid-gaz",
+  "nume_lung": "Pompă de căldură HYBRID BOX Sphera EVO + cazan gaz FE 33.4–33.4"
  }
 ]
