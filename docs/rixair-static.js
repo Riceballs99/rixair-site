@@ -125,3 +125,30 @@ document.addEventListener('DOMContentLoaded',function(){
  while(p&&p.offsetHeight===0)p=p.previousElementSibling;
  if(p){p.style.marginBottom='0px';p.style.overflow='hidden';}
 });
+
+/* rx-price-guard: pretul si codul de produs raman mereu corecte, indiferent ce rescrie gomag.js */
+(function(){
+ var f=document.querySelector('.fPrice'); if(!f) return;
+ var base=f.textContent;
+ var sk=document.querySelector('.product-code .code strong');
+ var bsku=sk?sk.textContent:null;
+ function want(){
+  var s=document.querySelector('.rxVar');
+  if(s&&s.options&&s.options.length){
+   var o=s.options[s.selectedIndex]||s.options[0];
+   var p=o.getAttribute('data-pret');
+   return {t:p?(' '+p+' Lei '):base, sku:o.getAttribute('data-sku')||bsku};
+  }
+  return {t:base, sku:bsku};
+ }
+ function apply(){
+  var w=want();
+  if(f.textContent!==w.t) f.textContent=w.t;
+  if(sk&&w.sku&&sk.textContent!==w.sku) sk.textContent=w.sku;
+  if(window.RXPROD&&w.sku) window.RXPROD.sku=w.sku;
+ }
+ apply();
+ try{new MutationObserver(apply).observe(f,{childList:true,characterData:true,subtree:true});}catch(e){}
+ document.addEventListener('change',function(e){if(e.target&&e.target.classList&&e.target.classList.contains('rxVar'))setTimeout(apply,0);},true);
+ setTimeout(apply,400); setTimeout(apply,1500);
+})();

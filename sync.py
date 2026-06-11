@@ -59,6 +59,9 @@ for nr, p in sorted(PR.items()):
             nota = '<span class="rx-note">Mai multe mărimi disponibile — configurația exactă se stabilește la ofertare.</span>'
             h = re.sub(r'<select class="input-s rxVar"[^>]*>.*?</select>', nota, h, flags=re.S)
         h = re.sub(r'("pret":)\s*[^,}]+', r'\g<1> %s' % (mn if mn else "null"), h, count=1)
+        val = ("%.4f" % mn) if mn else "0.0000"
+        h = re.sub(r'(id="productBasePrice" value=")[^"]*', r'\g<1>%s' % val, h)
+        h = re.sub(r'(id="productFinalPrice" value=")[^"]*', r'\g<1>%s' % val, h)
         # eticheta de stoc de pe detaliu (primul stock-status dupa fPrice)
         i = h.find("fPrice")
         seg = h[i:i+3000]
