@@ -78,7 +78,9 @@ table.rx-t img{width:54px;height:54px;object-fit:contain}
 /* rx-btn-align: butoane header aliniate identic */
 .main-header .acount-section ul{display:flex!important;align-items:center;gap:14px;margin:0!important;float:none}
 .main-header .acount-section li{margin:0!important;float:none!important;list-style:none;display:flex;align-items:center}
-.rx-calcbtn a, .main-header .cart-header-btn a.cart-drop{display:inline-flex!important;align-items:center;justify-content:center;width:52px!important;height:52px!important;border-radius:16px!important;margin:0!important;padding:0!important}
+.rx-calcbtn a, .main-header .cart-header-btn a.cart-drop, .main-header .-g-user-icon a{display:inline-flex!important;align-items:center;justify-content:center;width:52px!important;height:52px!important;border-radius:16px!important;margin:0!important;padding:0!important}
+.main-header .-g-user-icon a{background:#eef7ee!important;color:#2e7d32!important;font-size:20px}
+.main-header .-g-user-icon a:hover{background:#ddeedd!important}
 .rx-calcbtn a{background:#e8f4fa!important;color:#1583ab!important}
 .rx-calcbtn a:hover{background:#d5ecf7!important}
 
@@ -111,3 +113,9 @@ body.rx-cos .rx-x{font-size:19px;padding:6px 9px}
 body.rx-cos .rx-b{padding:15px 34px;font-size:15px;margin-top:8px}
 body.rx-cos #shoppingcart{max-width:1150px;margin:0 auto;padding-top:14px}
 body.rx-cos #shoppingcart p{font-size:15px}
+
+/* rx-qty: controale cantitate aliniate orizontal */
+.rx-qty{display:inline-flex;align-items:center;gap:2px;white-space:nowrap;border:1px solid #e3e9ef;border-radius:10px;padding:4px 6px}
+.rx-qty b{min-width:26px;text-align:center;font-size:15px}
+.rx-qty .rx-x{font-size:16px;padding:2px 8px;line-height:1}
+body.rx-cos table.rx-t td:nth-child(5){white-space:nowrap}

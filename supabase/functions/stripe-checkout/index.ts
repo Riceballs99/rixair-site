@@ -4,7 +4,7 @@
 import Stripe from "npm:stripe@17";
 
 const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY")!);
-const CATALOG_URL = Deno.env.get("CATALOG_URL") ?? "https://raw.githubusercontent.com/Riceballs99/rixair-site/main/data/produse.json";
+const CATALOG_URL = Deno.env.get("CATALOG_URL") ?? "https://raw.githubusercontent.com/rixair-ro/rixair-site/main/data/produse.json";
 const SITE = Deno.env.get("SITE_URL") ?? "http://localhost:8080";
 
 const cors = {

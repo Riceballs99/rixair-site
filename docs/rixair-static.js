@@ -54,7 +54,7 @@ function renderCerere(host){
  var t='<h1 style="font-size:24px;margin:10px 0">Cererea mea de ofert&#259;</h1><table class="rx-t"><tr><th></th><th>Produs</th><th>Variant&#259; / Cod</th><th>Pre&#539; orientativ</th><th>Cant.</th><th></th></tr>',tot=0,inc=true;
  l.forEach(function(i,x){if(i.pret)tot+=i.pret*i.qty;else inc=false;
   t+='<tr><td>'+(i.img?'<img src="'+i.img+'">':'')+'</td><td>'+i.nume+'</td><td>'+(i.varianta||'')+'<br><small>'+i.sku+'</small></td><td>'+fmtL(i.pret)+'</td>'+
-  '<td><button class="rx-x" data-a="m" data-x="'+x+'">&#8722;</button> '+i.qty+' <button class="rx-x" style="color:#2e7d32" data-a="p" data-x="'+x+'">+</button></td>'+
+  '<td><span class="rx-qty"><button class="rx-x" data-a="m" data-x="'+x+'">&#8722;</button><b>'+i.qty+'</b><button class="rx-x" style="color:#2e7d32" data-a="p" data-x="'+x+'">+</button></span></td>'+
   '<td><button class="rx-x" data-a="d" data-x="'+x+'">&#10005;</button></td></tr>';});
  t+='</table><p style="font-size:16px"><b>Total orientativ'+(inc?'':' (par&#539;ial)')+': '+fmtL(tot)+'</b> <small>cu TVA &#183; pre&#539;ul final se confirm&#259; prin ofert&#259;</small></p>';
  var toate_cu_pret = l.length>0 && l.every(function(i){return i.pret;});
